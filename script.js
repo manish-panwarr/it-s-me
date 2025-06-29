@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loader.classList.add('hidden');
                 document.body.classList.remove('loading');
-            },2600);
+            },1800);
         });
     }
 
