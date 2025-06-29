@@ -10,7 +10,7 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 
 ## 🔗 Live Website
 
-🌐 [View Portfolio:](https://manish-panwarr.github.io/my-portfolio/)
+🌐 [View Portfolio:](https://manish-panwarr.github.io/mani.com/)
 
 ---
 
