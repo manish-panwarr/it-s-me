@@ -5,13 +5,13 @@
 //    alert("Go to git repo..");
 //   });
 
-  document.addEventListener("keydown", function (e) {
-    // F12 key (Developer tools)
-    if (e.key === "F12") {
-      e.preventDefault();
-      alert("Go to git repo..");
-    }
-  });
+  // document.addEventListener("keydown", function (e) {
+  //   // F12 key (Developer tools)
+  //   if (e.key === "F12") {
+  //     e.preventDefault();
+  //     alert("Go to git repo..");
+  //   }
+  // });
 
   // Enable fullscreen on double-click
   document.addEventListener("dblclick", function () {
