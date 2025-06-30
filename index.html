@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,23 +9,67 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&family=Sacramento&family=Schoolbell&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&family=Sacramento&family=Schoolbell&display=swap"
+        rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Your Stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <!-- BEFORE </head> TAG -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
+
 <body>
     <!-- ==================== LOADER ==================== -->
     <div class="loader-wrapper" id="loader">
-        <div class="loader-content" >
-           
-           <svg class="loader-logo" viewBox="80 -10 80 100" xmlns="http://www.w3.org/2000/svg">
-           <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm" fill="none" style="stroke:#000;stroke-width:0.25mm;fill:none"><path d="M 11.22 48.36 L 11.16 48.36 Q 11.1 48.42 11.04 48.42 Q 10.98 48.42 10.98 48.36 Q 10.38 48.3 9.72 48.27 Q 9.06 48.24 8.46 48.24 Q 3 48.24 0.12 50.22 L 0 50.1 Q 1.8 48.36 2.85 47.4 Q 3.9 46.44 4.32 46.2 Q 6.36 44.88 9.78 44.88 Q 10.32 44.88 10.86 44.91 Q 11.4 44.94 12 45 Q 13.08 41.16 13.65 37.95 Q 14.22 34.74 14.22 32.16 Q 14.22 26.16 10.8 26.28 Q 10.62 26.28 10.08 26.46 Q 11.22 26.82 11.22 28.32 Q 11.22 30 9.66 31.02 Q 9.72 29.82 9.21 28.98 Q 8.7 28.14 7.62 28.14 L 7.32 28.14 Q 7.14 28.14 6.96 28.2 Q 7.74 27 8.85 26.28 Q 9.96 25.56 11.46 25.56 Q 15.42 25.56 15.42 31.56 Q 15.42 32.52 15.3 33.72 Q 15.18 34.92 14.94 36.3 Q 17.28 27.54 20.88 10.74 Q 19.38 10.38 17.88 10.38 Q 15.42 10.38 13.44 11.28 Q 10.98 12.48 10.98 14.64 Q 10.98 15.06 11.1 15.54 Q 11.22 16.02 11.46 16.56 L 12 17.64 Q 12 18.6 9.66 19.8 Q 9.06 19.02 9.06 17.76 Q 9.06 14.64 12.42 10.98 Q 15.78 7.44 18.96 7.44 Q 20.04 7.44 21.54 7.8 L 22.68 2.58 Q 23.34 1.32 23.82 0.84 Q 24.48 0.18 25.56 0 Q 24.42 1.5 22.8 8.1 L 25.56 9 Q 26.22 8.46 28.44 7.92 Q 29.1 7.74 29.7 7.74 Q 29.4 8.1 29.13 8.64 Q 28.86 9.18 28.56 9.84 Q 30.3 10.2 31.89 10.41 Q 33.48 10.62 34.92 10.62 Q 39 10.62 40.2 8.46 Q 40.62 7.74 40.92 7.74 Q 41.04 7.86 41.04 7.92 Q 41.04 8.1 40.86 8.46 Q 38.7 13.5 33.42 13.5 Q 32.16 13.5 30.69 13.29 Q 29.22 13.08 27.48 12.66 Q 26.7 14.88 25.65 19.35 Q 24.6 23.82 23.16 30.54 Q 21.9 36.66 20.91 40.56 Q 19.92 44.46 19.14 46.14 Q 21.78 46.56 23.82 46.83 Q 25.86 47.1 27.36 47.1 Q 29.16 47.1 30.66 46.74 Q 32.16 46.38 33.42 45.78 Q 33.6 45.78 33.6 45.9 Q 33.6 46.62 30.36 48.9 Q 28.26 50.22 25.62 50.22 Q 24.24 50.22 16.32 48.96 L 13.92 50.1 L 13.8 49.98 Q 14.04 49.68 14.22 49.35 Q 14.4 49.02 14.58 48.78 L 12.96 48.54 Q 10.08 56.76 8.28 58.32 Q 6.36 59.82 5.94 59.88 Q 5.4 60 5.16 59.82 Q 4.92 59.58 5.34 59.52 Q 6.84 59.04 7.68 57.36 Q 8.34 55.98 9.24 53.73 Q 10.14 51.48 11.22 48.36 Z M 23.52 16.32 L 24.3 11.7 L 22.02 11.04 Q 21.54 12.96 20.43 18.21 Q 19.32 23.46 17.52 32.04 Q 16.92 34.8 16.05 38.1 Q 15.18 41.4 13.98 45.24 Q 15.12 45.36 16.14 45.6 Q 20.22 36 23.52 16.32 Z" id="0" vector-effect="non-scaling-stroke"/><path d="M 36.3 35.46 L 38.4 30.54 Q 39.12 28.8 39.72 27.72 Q 40.32 26.64 40.68 26.22 Q 41.58 25.26 43.08 25.26 Q 44.52 25.26 44.52 25.86 L 42.42 29.16 Q 41.28 30.96 40.41 32.58 Q 39.54 34.2 38.88 35.64 Q 42.6 35.64 44.82 35.61 Q 47.04 35.58 47.82 35.58 L 48.3 35.58 Q 49.02 35.58 49.02 35.76 Q 49.02 36.12 47.58 36.42 Q 45 36.72 42.72 36.9 Q 40.44 37.08 38.4 37.08 Q 37.8 38.64 37.41 40.35 Q 37.02 42.06 37.02 43.62 Q 37.02 45.96 38.1 47.7 Q 39.18 49.44 41.94 49.44 Q 45.24 49.44 47.19 47.85 Q 49.14 46.26 51.18 43.74 Q 51.48 43.38 51.72 43.38 Q 51.9 43.38 51.9 43.68 Q 51.9 44.1 51.42 44.76 Q 48.84 48.06 46.59 49.44 Q 44.34 50.82 41.82 50.82 Q 38.34 50.82 36.39 48.78 Q 34.44 46.74 34.44 43.08 Q 34.44 40.08 35.52 37.2 Q 33.72 37.2 32.7 36.84 Q 31.02 36.48 31.02 35.58 Q 31.02 35.22 31.56 35.22 Q 31.98 35.22 32.55 35.25 Q 33.12 35.28 33.9 35.34 Q 34.74 35.4 35.34 35.43 Q 35.94 35.46 36.3 35.46 Z" id="1" vector-effect="non-scaling-stroke"/><path d="M 58.38 16.74 L 58.38 16.32 Q 58.38 15.96 58.53 15.63 Q 58.68 15.3 59.22 15.3 Q 60.24 15.3 60.66 16.98 Q 60.78 17.4 60.63 18.6 Q 60.48 19.8 60.24 21.33 Q 60 22.86 59.7 24.39 Q 59.4 25.92 59.1 27 Q 58.98 27.12 58.62 27.12 Q 57.9 27.12 57.96 27 Q 58.26 25.68 58.35 23.55 Q 58.44 21.42 58.44 19.56 Q 58.44 18.72 58.41 17.97 Q 58.38 17.22 58.38 16.74 Z" id="2" vector-effect="non-scaling-stroke"/><path d="M 68.22 34.86 L 69.54 32.58 Q 69.6 32.34 69.9 32.34 Q 70.5 32.34 71.13 33.09 Q 71.76 33.84 71.76 34.44 Q 71.76 34.86 71.04 35.94 Q 70.26 36.9 70.26 37.98 Q 70.26 38.4 70.32 39.27 Q 70.38 40.14 70.38 40.62 Q 70.38 46.14 68.58 48.78 Q 68.94 48.84 69.39 48.87 Q 69.84 48.9 70.26 48.9 Q 72.66 48.9 74.19 48.45 Q 75.72 48 76.98 46.86 Q 78.24 45.72 79.74 43.74 Q 79.92 43.5 80.16 43.5 Q 80.4 43.5 80.4 43.86 Q 80.4 44.04 80.25 44.34 Q 80.1 44.64 79.98 44.76 Q 77.82 47.7 75.57 48.9 Q 73.32 50.1 69.66 50.1 Q 68.52 50.1 67.44 49.92 Q 66.84 50.28 66 50.28 Q 65.4 50.28 64.74 50.1 Q 62.94 49.68 60.72 47.7 Q 58.32 45.48 58.32 43.92 Q 58.32 42.6 59.34 42.6 Q 60.12 42.6 60.84 43.56 Q 62.94 41.88 64.8 39.72 Q 66.66 37.56 68.22 34.86 Z M 66.06 48.06 Q 67.98 47.7 67.98 43.02 Q 67.98 41.82 67.89 40.59 Q 67.8 39.36 67.56 38.04 Q 65.4 41.22 61.5 44.46 Q 63.3 46.92 66.06 48.06 Z" id="3" vector-effect="non-scaling-stroke"/><path d="M 97.2 50.1 L 97.2 48.96 Q 97.2 41.52 95.28 41.52 Q 94.02 41.52 91.44 45.6 Q 90.72 46.68 90.03 47.76 Q 89.34 48.84 88.68 49.92 Q 88.32 50.04 88.14 50.04 Q 87.54 50.04 87.54 49.14 L 87.54 48.96 L 88.26 46.56 Q 89.52 42.78 90.12 40.53 Q 90.72 38.28 90.72 37.56 Q 90.72 37.32 90.66 37.26 Q 91.86 36.18 92.94 36.18 Q 93.48 36.18 93.36 36.48 L 92.28 42.54 Q 92.88 41.7 94.74 40.44 Q 95.7 39.78 96.39 39.48 Q 97.08 39.18 97.5 39.18 Q 99.36 39.18 99.6 46.68 Q 100.26 45.48 101.37 43.68 Q 102.48 41.88 103.98 39.54 Q 104.82 38.4 105.78 38.4 Q 106.68 38.4 106.86 39.54 Q 107.04 41.88 107.22 43.89 Q 107.4 45.9 108 47.1 Q 108.6 48.3 110.04 48.36 Q 111.84 48.36 113.61 47.01 Q 115.38 45.66 116.82 43.74 Q 117.12 43.26 117.42 43.26 Q 117.6 43.26 117.6 43.74 Q 117.6 43.86 117.36 44.25 Q 117.12 44.64 117 44.76 Q 115.98 46.26 114.63 47.67 Q 113.28 49.08 111.78 49.95 Q 110.28 50.82 108.78 50.82 Q 106.56 50.82 105.54 48.42 Q 104.52 46.02 104.28 41.64 Q 103.02 42.78 101.58 45.72 Q 100.68 47.4 100.08 48.51 Q 99.48 49.62 99.18 50.1 Q 98.58 51 98.04 51 Q 97.5 51 97.2 50.1 Z" id="5" vector-effect="non-scaling-stroke"/><path d="M 122.76 50.58 Q 120.3 50.58 118.53 49.17 Q 116.76 47.76 116.76 44.88 Q 116.76 41.7 118.86 38.34 Q 119.94 36.6 121.5 35.55 Q 123.06 34.5 124.26 34.5 Q 126 34.5 126 36.6 Q 126 38.4 123.6 40.98 Q 121.38 43.26 119.4 44.1 Q 119.34 44.34 119.31 44.61 Q 119.28 44.88 119.28 45.18 Q 119.28 48.96 123.78 48.96 Q 126.36 48.96 128.61 47.37 Q 130.86 45.78 132.54 43.74 Q 132.84 43.38 133.08 43.38 Q 133.32 43.38 133.32 43.62 Q 133.32 43.86 133.08 44.25 Q 132.84 44.64 132.72 44.76 Q 131.76 46.08 130.71 47.1 Q 129.66 48.12 127.92 49.08 Q 126.66 49.86 125.31 50.22 Q 123.96 50.58 122.76 50.58 Z M 119.64 42.84 Q 120.42 42.42 121.17 41.85 Q 121.92 41.28 122.64 40.5 Q 124.26 38.58 124.26 37.14 Q 124.26 36.24 123.72 36.24 Q 123.24 36.24 122.49 37.05 Q 121.74 37.86 121.08 39.06 Q 119.94 41.4 119.64 42.84 Z" id="6" vector-effect="non-scaling-stroke"/><path d="M 149.94 50.1 L 149.94 48.96 Q 149.94 41.52 148.02 41.52 Q 146.76 41.52 144.18 45.6 Q 143.46 46.68 142.77 47.76 Q 142.08 48.84 141.42 49.92 Q 141.06 50.04 140.88 50.04 Q 140.28 50.04 140.28 49.14 L 140.28 48.96 L 141 46.56 Q 142.26 42.78 142.86 40.53 Q 143.46 38.28 143.46 37.56 Q 143.46 37.32 143.4 37.26 Q 144.6 36.18 145.68 36.18 Q 146.22 36.18 146.1 36.48 L 145.02 42.54 Q 145.62 41.7 147.48 40.44 Q 148.44 39.78 149.13 39.48 Q 149.82 39.18 150.24 39.18 Q 152.1 39.18 152.34 46.68 Q 153 45.48 154.11 43.68 Q 155.22 41.88 156.72 39.54 Q 157.56 38.4 158.52 38.4 Q 159.42 38.4 159.6 39.54 Q 159.78 41.88 159.96 43.89 Q 160.14 45.9 160.74 47.1 Q 161.34 48.3 162.78 48.36 Q 164.58 48.36 166.35 47.01 Q 168.12 45.66 169.56 43.74 Q 169.86 43.26 170.16 43.26 Q 170.34 43.26 170.34 43.74 Q 170.34 43.86 170.1 44.25 Q 169.86 44.64 169.74 44.76 Q 168.72 46.26 167.37 47.67 Q 166.02 49.08 164.52 49.95 Q 163.02 50.82 161.52 50.82 Q 159.3 50.82 158.28 48.42 Q 157.26 46.02 157.02 41.64 Q 155.76 42.78 154.32 45.72 Q 153.42 47.4 152.82 48.51 Q 152.22 49.62 151.92 50.1 Q 151.32 51 150.78 51 Q 150.24 51 149.94 50.1 Z" id="8" vector-effect="non-scaling-stroke"/><path d="M 170.16 50.46 Q 167.7 50.46 167.7 48.06 Q 167.7 45.78 171 41.7 Q 174 37.92 176.22 36.48 Q 178.44 35.04 180.36 35.04 Q 182.64 35.04 182.64 36.36 Q 182.64 36.66 182.04 37.23 Q 181.44 37.8 181.38 37.92 Q 180.24 39.78 180.24 45.48 Q 180.24 48.78 181.68 48.78 Q 183 48.78 184.74 47.22 Q 186.48 45.66 187.98 43.74 Q 188.16 43.56 188.28 43.56 Q 188.52 43.56 188.52 43.86 Q 188.52 43.98 188.43 44.28 Q 188.34 44.58 188.22 44.76 Q 185.76 48.06 183.99 49.2 Q 182.22 50.34 180.54 50.34 Q 177.84 50.34 177.9 44.58 Q 176.76 46.62 174.6 48.42 Q 172.08 50.46 170.16 50.46 Z M 171.78 48.84 Q 172.8 48.84 173.94 48 Q 177.48 45.18 178.56 37.44 Q 178.38 37.44 178.32 37.38 Q 177.12 37.38 175.14 38.82 Q 173.46 39.96 172.44 41.28 Q 170.04 44.4 170.04 46.68 Q 170.04 48.84 171.78 48.84 Z" id="9" vector-effect="non-scaling-stroke"/><path d="M 186.42 49.14 L 186.42 48.96 L 186.96 47.94 Q 187.44 46.56 187.92 44.61 Q 188.4 42.66 188.82 40.14 Q 188.88 39.54 189 38.85 Q 189.12 38.16 189.24 37.26 Q 189.54 36.06 191.1 36.06 Q 191.58 36.06 191.58 36.42 Q 191.58 36.54 191.46 37.26 Q 191.34 37.98 191.1 39.24 Q 190.86 40.62 190.53 42.24 Q 190.2 43.86 189.78 45.72 L 192.6 40.98 Q 194.7 37.44 196.14 37.44 Q 197.04 37.44 197.1 38.52 Q 197.28 41.04 197.37 43.5 Q 197.46 45.96 198.03 47.58 Q 198.6 49.2 200.1 49.2 Q 201.12 49.2 202.11 48.78 Q 203.1 48.36 204.36 47.19 Q 205.62 46.02 207.36 43.74 Q 207.42 43.62 207.6 43.44 Q 207.78 43.26 208.02 43.26 Q 208.26 43.26 208.26 43.5 Q 208.26 43.74 207.99 44.16 Q 207.72 44.58 207.6 44.76 Q 205.98 47.16 203.94 48.78 Q 201.9 50.4 200.1 50.4 Q 197.46 50.4 196.23 47.73 Q 195 45.06 194.52 40.14 Q 193.56 41.16 192.27 43.2 Q 190.98 45.24 189.3 48.42 Q 189.18 48.72 188.94 49.11 Q 188.7 49.5 188.4 50.1 Q 188.16 50.64 187.74 50.64 Q 187.32 50.64 186.87 50.1 Q 186.42 49.56 186.42 49.14 Z" id="10" vector-effect="non-scaling-stroke"/><path d="M 212.1 50.58 Q 210.06 50.58 208.71 49.17 Q 207.36 47.76 207.36 45.06 Q 207.36 41.76 209.16 38.34 Q 209.82 37.08 211.44 37.08 Q 212.4 37.08 212.4 37.68 Q 212.4 37.86 212.22 38.22 Q 210.12 42.24 210.12 45.12 Q 210.12 47.22 210.87 48.18 Q 211.62 49.14 212.94 49.14 Q 215.04 49.14 217.14 47.55 Q 219.24 45.96 221.22 43.68 Q 221.4 43.38 221.76 43.38 Q 222 43.38 222 43.62 Q 222 43.8 221.79 44.13 Q 221.58 44.46 221.4 44.76 Q 220.62 45.78 219.54 46.86 Q 218.46 47.94 217.02 48.9 Q 215.88 49.68 214.59 50.13 Q 213.3 50.58 212.1 50.58 Z M 212.88 31.86 Q 212.16 31.86 211.56 31.2 Q 210.96 30.54 210.96 29.82 Q 210.96 28.14 212.82 28.14 Q 214.62 28.14 214.62 29.88 Q 214.62 31.86 212.88 31.86 Z" id="11" vector-effect="non-scaling-stroke"/><path d="M 229.08 34.86 L 230.4 32.58 Q 230.46 32.34 230.76 32.34 Q 231.36 32.34 231.99 33.09 Q 232.62 33.84 232.62 34.44 Q 232.62 34.86 231.9 35.94 Q 231.12 36.9 231.12 37.98 Q 231.12 38.4 231.18 39.27 Q 231.24 40.14 231.24 40.62 Q 231.24 46.14 229.44 48.78 Q 229.8 48.84 230.25 48.87 Q 230.7 48.9 231.12 48.9 Q 233.52 48.9 235.05 48.45 Q 236.58 48 237.84 46.86 Q 239.1 45.72 240.6 43.74 Q 240.78 43.5 241.02 43.5 Q 241.26 43.5 241.26 43.86 Q 241.26 44.04 241.11 44.34 Q 240.96 44.64 240.84 44.76 Q 238.68 47.7 236.43 48.9 Q 234.18 50.1 230.52 50.1 Q 229.38 50.1 228.3 49.92 Q 227.7 50.28 226.86 50.28 Q 226.26 50.28 225.6 50.1 Q 223.8 49.68 221.58 47.7 Q 219.18 45.48 219.18 43.92 Q 219.18 42.6 220.2 42.6 Q 220.98 42.6 221.7 43.56 Q 223.8 41.88 225.66 39.72 Q 227.52 37.56 229.08 34.86 Z M 226.92 48.06 Q 228.84 47.7 228.84 43.02 Q 228.84 41.82 228.75 40.59 Q 228.66 39.36 228.42 38.04 Q 226.26 41.22 222.36 44.46 Q 224.16 46.92 226.92 48.06 Z" id="12" vector-effect="non-scaling-stroke"/><path d="M 254.34 32.1 L 246.6 39.3 Q 246.18 39.72 245.67 40.29 Q 245.16 40.86 244.5 41.64 Q 244.08 42.3 243.24 44.46 Q 242.52 46.62 242.52 47.46 Q 242.52 48.12 242.82 48.6 Q 242.94 48.48 243.51 48.03 Q 244.08 47.58 245.04 46.74 Q 250.8 41.88 253.5 41.88 Q 254.04 41.88 254.43 42.78 Q 254.82 43.68 255.24 45.42 Q 256.26 49.2 258.42 49.2 Q 260.34 49.2 263.52 46.2 Q 264.06 45.6 264.63 44.97 Q 265.2 44.34 265.68 43.74 Q 265.98 43.26 266.28 43.26 Q 266.64 43.26 266.46 43.74 Q 266.4 43.98 266.22 44.31 Q 266.04 44.64 265.92 44.76 Q 264.72 46.38 263.52 47.7 Q 262.02 49.14 260.52 49.98 Q 259.02 50.82 257.64 50.82 Q 256.38 50.82 255.27 50.07 Q 254.16 49.32 253.32 47.7 Q 251.64 44.46 250.8 44.46 Q 249.66 44.46 247.92 45.69 Q 246.18 46.92 243.96 49.5 L 242.52 51.18 Q 242.1 51.36 241.74 51.36 Q 241.02 51.36 240.27 50.79 Q 239.52 50.22 239.52 49.5 Q 239.52 47.58 241.02 42.66 Q 243.3 35.16 246.78 28.68 Q 251.94 18.84 256.56 18.84 Q 259.38 18.84 259.38 23.52 Q 259.38 26.94 254.34 32.1 Z M 245.04 39.18 Q 247.02 37.8 249.09 35.91 Q 251.16 34.02 253.26 31.74 Q 258.48 25.86 258.48 22.62 Q 258.48 20.7 256.98 20.7 Q 252.9 20.7 246.3 35.94 Q 245.04 38.7 245.04 39.18 Z" id="13" vector-effect="non-scaling-stroke"/></g> 
-           
-        </svg>
+        <div class="loader-content">
+
+            <svg class="loader-logo" viewBox="80 -10 80 100" xmlns="http://www.w3.org/2000/svg">
+                <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                    stroke-width="0.25mm" fill="none" style="stroke:#000;stroke-width:0.25mm;fill:none">
+                    <path
+                        d="M 11.22 48.36 L 11.16 48.36 Q 11.1 48.42 11.04 48.42 Q 10.98 48.42 10.98 48.36 Q 10.38 48.3 9.72 48.27 Q 9.06 48.24 8.46 48.24 Q 3 48.24 0.12 50.22 L 0 50.1 Q 1.8 48.36 2.85 47.4 Q 3.9 46.44 4.32 46.2 Q 6.36 44.88 9.78 44.88 Q 10.32 44.88 10.86 44.91 Q 11.4 44.94 12 45 Q 13.08 41.16 13.65 37.95 Q 14.22 34.74 14.22 32.16 Q 14.22 26.16 10.8 26.28 Q 10.62 26.28 10.08 26.46 Q 11.22 26.82 11.22 28.32 Q 11.22 30 9.66 31.02 Q 9.72 29.82 9.21 28.98 Q 8.7 28.14 7.62 28.14 L 7.32 28.14 Q 7.14 28.14 6.96 28.2 Q 7.74 27 8.85 26.28 Q 9.96 25.56 11.46 25.56 Q 15.42 25.56 15.42 31.56 Q 15.42 32.52 15.3 33.72 Q 15.18 34.92 14.94 36.3 Q 17.28 27.54 20.88 10.74 Q 19.38 10.38 17.88 10.38 Q 15.42 10.38 13.44 11.28 Q 10.98 12.48 10.98 14.64 Q 10.98 15.06 11.1 15.54 Q 11.22 16.02 11.46 16.56 L 12 17.64 Q 12 18.6 9.66 19.8 Q 9.06 19.02 9.06 17.76 Q 9.06 14.64 12.42 10.98 Q 15.78 7.44 18.96 7.44 Q 20.04 7.44 21.54 7.8 L 22.68 2.58 Q 23.34 1.32 23.82 0.84 Q 24.48 0.18 25.56 0 Q 24.42 1.5 22.8 8.1 L 25.56 9 Q 26.22 8.46 28.44 7.92 Q 29.1 7.74 29.7 7.74 Q 29.4 8.1 29.13 8.64 Q 28.86 9.18 28.56 9.84 Q 30.3 10.2 31.89 10.41 Q 33.48 10.62 34.92 10.62 Q 39 10.62 40.2 8.46 Q 40.62 7.74 40.92 7.74 Q 41.04 7.86 41.04 7.92 Q 41.04 8.1 40.86 8.46 Q 38.7 13.5 33.42 13.5 Q 32.16 13.5 30.69 13.29 Q 29.22 13.08 27.48 12.66 Q 26.7 14.88 25.65 19.35 Q 24.6 23.82 23.16 30.54 Q 21.9 36.66 20.91 40.56 Q 19.92 44.46 19.14 46.14 Q 21.78 46.56 23.82 46.83 Q 25.86 47.1 27.36 47.1 Q 29.16 47.1 30.66 46.74 Q 32.16 46.38 33.42 45.78 Q 33.6 45.78 33.6 45.9 Q 33.6 46.62 30.36 48.9 Q 28.26 50.22 25.62 50.22 Q 24.24 50.22 16.32 48.96 L 13.92 50.1 L 13.8 49.98 Q 14.04 49.68 14.22 49.35 Q 14.4 49.02 14.58 48.78 L 12.96 48.54 Q 10.08 56.76 8.28 58.32 Q 6.36 59.82 5.94 59.88 Q 5.4 60 5.16 59.82 Q 4.92 59.58 5.34 59.52 Q 6.84 59.04 7.68 57.36 Q 8.34 55.98 9.24 53.73 Q 10.14 51.48 11.22 48.36 Z M 23.52 16.32 L 24.3 11.7 L 22.02 11.04 Q 21.54 12.96 20.43 18.21 Q 19.32 23.46 17.52 32.04 Q 16.92 34.8 16.05 38.1 Q 15.18 41.4 13.98 45.24 Q 15.12 45.36 16.14 45.6 Q 20.22 36 23.52 16.32 Z"
+                        id="0" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 36.3 35.46 L 38.4 30.54 Q 39.12 28.8 39.72 27.72 Q 40.32 26.64 40.68 26.22 Q 41.58 25.26 43.08 25.26 Q 44.52 25.26 44.52 25.86 L 42.42 29.16 Q 41.28 30.96 40.41 32.58 Q 39.54 34.2 38.88 35.64 Q 42.6 35.64 44.82 35.61 Q 47.04 35.58 47.82 35.58 L 48.3 35.58 Q 49.02 35.58 49.02 35.76 Q 49.02 36.12 47.58 36.42 Q 45 36.72 42.72 36.9 Q 40.44 37.08 38.4 37.08 Q 37.8 38.64 37.41 40.35 Q 37.02 42.06 37.02 43.62 Q 37.02 45.96 38.1 47.7 Q 39.18 49.44 41.94 49.44 Q 45.24 49.44 47.19 47.85 Q 49.14 46.26 51.18 43.74 Q 51.48 43.38 51.72 43.38 Q 51.9 43.38 51.9 43.68 Q 51.9 44.1 51.42 44.76 Q 48.84 48.06 46.59 49.44 Q 44.34 50.82 41.82 50.82 Q 38.34 50.82 36.39 48.78 Q 34.44 46.74 34.44 43.08 Q 34.44 40.08 35.52 37.2 Q 33.72 37.2 32.7 36.84 Q 31.02 36.48 31.02 35.58 Q 31.02 35.22 31.56 35.22 Q 31.98 35.22 32.55 35.25 Q 33.12 35.28 33.9 35.34 Q 34.74 35.4 35.34 35.43 Q 35.94 35.46 36.3 35.46 Z"
+                        id="1" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 58.38 16.74 L 58.38 16.32 Q 58.38 15.96 58.53 15.63 Q 58.68 15.3 59.22 15.3 Q 60.24 15.3 60.66 16.98 Q 60.78 17.4 60.63 18.6 Q 60.48 19.8 60.24 21.33 Q 60 22.86 59.7 24.39 Q 59.4 25.92 59.1 27 Q 58.98 27.12 58.62 27.12 Q 57.9 27.12 57.96 27 Q 58.26 25.68 58.35 23.55 Q 58.44 21.42 58.44 19.56 Q 58.44 18.72 58.41 17.97 Q 58.38 17.22 58.38 16.74 Z"
+                        id="2" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 68.22 34.86 L 69.54 32.58 Q 69.6 32.34 69.9 32.34 Q 70.5 32.34 71.13 33.09 Q 71.76 33.84 71.76 34.44 Q 71.76 34.86 71.04 35.94 Q 70.26 36.9 70.26 37.98 Q 70.26 38.4 70.32 39.27 Q 70.38 40.14 70.38 40.62 Q 70.38 46.14 68.58 48.78 Q 68.94 48.84 69.39 48.87 Q 69.84 48.9 70.26 48.9 Q 72.66 48.9 74.19 48.45 Q 75.72 48 76.98 46.86 Q 78.24 45.72 79.74 43.74 Q 79.92 43.5 80.16 43.5 Q 80.4 43.5 80.4 43.86 Q 80.4 44.04 80.25 44.34 Q 80.1 44.64 79.98 44.76 Q 77.82 47.7 75.57 48.9 Q 73.32 50.1 69.66 50.1 Q 68.52 50.1 67.44 49.92 Q 66.84 50.28 66 50.28 Q 65.4 50.28 64.74 50.1 Q 62.94 49.68 60.72 47.7 Q 58.32 45.48 58.32 43.92 Q 58.32 42.6 59.34 42.6 Q 60.12 42.6 60.84 43.56 Q 62.94 41.88 64.8 39.72 Q 66.66 37.56 68.22 34.86 Z M 66.06 48.06 Q 67.98 47.7 67.98 43.02 Q 67.98 41.82 67.89 40.59 Q 67.8 39.36 67.56 38.04 Q 65.4 41.22 61.5 44.46 Q 63.3 46.92 66.06 48.06 Z"
+                        id="3" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 97.2 50.1 L 97.2 48.96 Q 97.2 41.52 95.28 41.52 Q 94.02 41.52 91.44 45.6 Q 90.72 46.68 90.03 47.76 Q 89.34 48.84 88.68 49.92 Q 88.32 50.04 88.14 50.04 Q 87.54 50.04 87.54 49.14 L 87.54 48.96 L 88.26 46.56 Q 89.52 42.78 90.12 40.53 Q 90.72 38.28 90.72 37.56 Q 90.72 37.32 90.66 37.26 Q 91.86 36.18 92.94 36.18 Q 93.48 36.18 93.36 36.48 L 92.28 42.54 Q 92.88 41.7 94.74 40.44 Q 95.7 39.78 96.39 39.48 Q 97.08 39.18 97.5 39.18 Q 99.36 39.18 99.6 46.68 Q 100.26 45.48 101.37 43.68 Q 102.48 41.88 103.98 39.54 Q 104.82 38.4 105.78 38.4 Q 106.68 38.4 106.86 39.54 Q 107.04 41.88 107.22 43.89 Q 107.4 45.9 108 47.1 Q 108.6 48.3 110.04 48.36 Q 111.84 48.36 113.61 47.01 Q 115.38 45.66 116.82 43.74 Q 117.12 43.26 117.42 43.26 Q 117.6 43.26 117.6 43.74 Q 117.6 43.86 117.36 44.25 Q 117.12 44.64 117 44.76 Q 115.98 46.26 114.63 47.67 Q 113.28 49.08 111.78 49.95 Q 110.28 50.82 108.78 50.82 Q 106.56 50.82 105.54 48.42 Q 104.52 46.02 104.28 41.64 Q 103.02 42.78 101.58 45.72 Q 100.68 47.4 100.08 48.51 Q 99.48 49.62 99.18 50.1 Q 98.58 51 98.04 51 Q 97.5 51 97.2 50.1 Z"
+                        id="5" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 122.76 50.58 Q 120.3 50.58 118.53 49.17 Q 116.76 47.76 116.76 44.88 Q 116.76 41.7 118.86 38.34 Q 119.94 36.6 121.5 35.55 Q 123.06 34.5 124.26 34.5 Q 126 34.5 126 36.6 Q 126 38.4 123.6 40.98 Q 121.38 43.26 119.4 44.1 Q 119.34 44.34 119.31 44.61 Q 119.28 44.88 119.28 45.18 Q 119.28 48.96 123.78 48.96 Q 126.36 48.96 128.61 47.37 Q 130.86 45.78 132.54 43.74 Q 132.84 43.38 133.08 43.38 Q 133.32 43.38 133.32 43.62 Q 133.32 43.86 133.08 44.25 Q 132.84 44.64 132.72 44.76 Q 131.76 46.08 130.71 47.1 Q 129.66 48.12 127.92 49.08 Q 126.66 49.86 125.31 50.22 Q 123.96 50.58 122.76 50.58 Z M 119.64 42.84 Q 120.42 42.42 121.17 41.85 Q 121.92 41.28 122.64 40.5 Q 124.26 38.58 124.26 37.14 Q 124.26 36.24 123.72 36.24 Q 123.24 36.24 122.49 37.05 Q 121.74 37.86 121.08 39.06 Q 119.94 41.4 119.64 42.84 Z"
+                        id="6" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 149.94 50.1 L 149.94 48.96 Q 149.94 41.52 148.02 41.52 Q 146.76 41.52 144.18 45.6 Q 143.46 46.68 142.77 47.76 Q 142.08 48.84 141.42 49.92 Q 141.06 50.04 140.88 50.04 Q 140.28 50.04 140.28 49.14 L 140.28 48.96 L 141 46.56 Q 142.26 42.78 142.86 40.53 Q 143.46 38.28 143.46 37.56 Q 143.46 37.32 143.4 37.26 Q 144.6 36.18 145.68 36.18 Q 146.22 36.18 146.1 36.48 L 145.02 42.54 Q 145.62 41.7 147.48 40.44 Q 148.44 39.78 149.13 39.48 Q 149.82 39.18 150.24 39.18 Q 152.1 39.18 152.34 46.68 Q 153 45.48 154.11 43.68 Q 155.22 41.88 156.72 39.54 Q 157.56 38.4 158.52 38.4 Q 159.42 38.4 159.6 39.54 Q 159.78 41.88 159.96 43.89 Q 160.14 45.9 160.74 47.1 Q 161.34 48.3 162.78 48.36 Q 164.58 48.36 166.35 47.01 Q 168.12 45.66 169.56 43.74 Q 169.86 43.26 170.16 43.26 Q 170.34 43.26 170.34 43.74 Q 170.34 43.86 170.1 44.25 Q 169.86 44.64 169.74 44.76 Q 168.72 46.26 167.37 47.67 Q 166.02 49.08 164.52 49.95 Q 163.02 50.82 161.52 50.82 Q 159.3 50.82 158.28 48.42 Q 157.26 46.02 157.02 41.64 Q 155.76 42.78 154.32 45.72 Q 153.42 47.4 152.82 48.51 Q 152.22 49.62 151.92 50.1 Q 151.32 51 150.78 51 Q 150.24 51 149.94 50.1 Z"
+                        id="8" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 170.16 50.46 Q 167.7 50.46 167.7 48.06 Q 167.7 45.78 171 41.7 Q 174 37.92 176.22 36.48 Q 178.44 35.04 180.36 35.04 Q 182.64 35.04 182.64 36.36 Q 182.64 36.66 182.04 37.23 Q 181.44 37.8 181.38 37.92 Q 180.24 39.78 180.24 45.48 Q 180.24 48.78 181.68 48.78 Q 183 48.78 184.74 47.22 Q 186.48 45.66 187.98 43.74 Q 188.16 43.56 188.28 43.56 Q 188.52 43.56 188.52 43.86 Q 188.52 43.98 188.43 44.28 Q 188.34 44.58 188.22 44.76 Q 185.76 48.06 183.99 49.2 Q 182.22 50.34 180.54 50.34 Q 177.84 50.34 177.9 44.58 Q 176.76 46.62 174.6 48.42 Q 172.08 50.46 170.16 50.46 Z M 171.78 48.84 Q 172.8 48.84 173.94 48 Q 177.48 45.18 178.56 37.44 Q 178.38 37.44 178.32 37.38 Q 177.12 37.38 175.14 38.82 Q 173.46 39.96 172.44 41.28 Q 170.04 44.4 170.04 46.68 Q 170.04 48.84 171.78 48.84 Z"
+                        id="9" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 186.42 49.14 L 186.42 48.96 L 186.96 47.94 Q 187.44 46.56 187.92 44.61 Q 188.4 42.66 188.82 40.14 Q 188.88 39.54 189 38.85 Q 189.12 38.16 189.24 37.26 Q 189.54 36.06 191.1 36.06 Q 191.58 36.06 191.58 36.42 Q 191.58 36.54 191.46 37.26 Q 191.34 37.98 191.1 39.24 Q 190.86 40.62 190.53 42.24 Q 190.2 43.86 189.78 45.72 L 192.6 40.98 Q 194.7 37.44 196.14 37.44 Q 197.04 37.44 197.1 38.52 Q 197.28 41.04 197.37 43.5 Q 197.46 45.96 198.03 47.58 Q 198.6 49.2 200.1 49.2 Q 201.12 49.2 202.11 48.78 Q 203.1 48.36 204.36 47.19 Q 205.62 46.02 207.36 43.74 Q 207.42 43.62 207.6 43.44 Q 207.78 43.26 208.02 43.26 Q 208.26 43.26 208.26 43.5 Q 208.26 43.74 207.99 44.16 Q 207.72 44.58 207.6 44.76 Q 205.98 47.16 203.94 48.78 Q 201.9 50.4 200.1 50.4 Q 197.46 50.4 196.23 47.73 Q 195 45.06 194.52 40.14 Q 193.56 41.16 192.27 43.2 Q 190.98 45.24 189.3 48.42 Q 189.18 48.72 188.94 49.11 Q 188.7 49.5 188.4 50.1 Q 188.16 50.64 187.74 50.64 Q 187.32 50.64 186.87 50.1 Q 186.42 49.56 186.42 49.14 Z"
+                        id="10" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 212.1 50.58 Q 210.06 50.58 208.71 49.17 Q 207.36 47.76 207.36 45.06 Q 207.36 41.76 209.16 38.34 Q 209.82 37.08 211.44 37.08 Q 212.4 37.08 212.4 37.68 Q 212.4 37.86 212.22 38.22 Q 210.12 42.24 210.12 45.12 Q 210.12 47.22 210.87 48.18 Q 211.62 49.14 212.94 49.14 Q 215.04 49.14 217.14 47.55 Q 219.24 45.96 221.22 43.68 Q 221.4 43.38 221.76 43.38 Q 222 43.38 222 43.62 Q 222 43.8 221.79 44.13 Q 221.58 44.46 221.4 44.76 Q 220.62 45.78 219.54 46.86 Q 218.46 47.94 217.02 48.9 Q 215.88 49.68 214.59 50.13 Q 213.3 50.58 212.1 50.58 Z M 212.88 31.86 Q 212.16 31.86 211.56 31.2 Q 210.96 30.54 210.96 29.82 Q 210.96 28.14 212.82 28.14 Q 214.62 28.14 214.62 29.88 Q 214.62 31.86 212.88 31.86 Z"
+                        id="11" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 229.08 34.86 L 230.4 32.58 Q 230.46 32.34 230.76 32.34 Q 231.36 32.34 231.99 33.09 Q 232.62 33.84 232.62 34.44 Q 232.62 34.86 231.9 35.94 Q 231.12 36.9 231.12 37.98 Q 231.12 38.4 231.18 39.27 Q 231.24 40.14 231.24 40.62 Q 231.24 46.14 229.44 48.78 Q 229.8 48.84 230.25 48.87 Q 230.7 48.9 231.12 48.9 Q 233.52 48.9 235.05 48.45 Q 236.58 48 237.84 46.86 Q 239.1 45.72 240.6 43.74 Q 240.78 43.5 241.02 43.5 Q 241.26 43.5 241.26 43.86 Q 241.26 44.04 241.11 44.34 Q 240.96 44.64 240.84 44.76 Q 238.68 47.7 236.43 48.9 Q 234.18 50.1 230.52 50.1 Q 229.38 50.1 228.3 49.92 Q 227.7 50.28 226.86 50.28 Q 226.26 50.28 225.6 50.1 Q 223.8 49.68 221.58 47.7 Q 219.18 45.48 219.18 43.92 Q 219.18 42.6 220.2 42.6 Q 220.98 42.6 221.7 43.56 Q 223.8 41.88 225.66 39.72 Q 227.52 37.56 229.08 34.86 Z M 226.92 48.06 Q 228.84 47.7 228.84 43.02 Q 228.84 41.82 228.75 40.59 Q 228.66 39.36 228.42 38.04 Q 226.26 41.22 222.36 44.46 Q 224.16 46.92 226.92 48.06 Z"
+                        id="12" vector-effect="non-scaling-stroke" />
+                    <path
+                        d="M 254.34 32.1 L 246.6 39.3 Q 246.18 39.72 245.67 40.29 Q 245.16 40.86 244.5 41.64 Q 244.08 42.3 243.24 44.46 Q 242.52 46.62 242.52 47.46 Q 242.52 48.12 242.82 48.6 Q 242.94 48.48 243.51 48.03 Q 244.08 47.58 245.04 46.74 Q 250.8 41.88 253.5 41.88 Q 254.04 41.88 254.43 42.78 Q 254.82 43.68 255.24 45.42 Q 256.26 49.2 258.42 49.2 Q 260.34 49.2 263.52 46.2 Q 264.06 45.6 264.63 44.97 Q 265.2 44.34 265.68 43.74 Q 265.98 43.26 266.28 43.26 Q 266.64 43.26 266.46 43.74 Q 266.4 43.98 266.22 44.31 Q 266.04 44.64 265.92 44.76 Q 264.72 46.38 263.52 47.7 Q 262.02 49.14 260.52 49.98 Q 259.02 50.82 257.64 50.82 Q 256.38 50.82 255.27 50.07 Q 254.16 49.32 253.32 47.7 Q 251.64 44.46 250.8 44.46 Q 249.66 44.46 247.92 45.69 Q 246.18 46.92 243.96 49.5 L 242.52 51.18 Q 242.1 51.36 241.74 51.36 Q 241.02 51.36 240.27 50.79 Q 239.52 50.22 239.52 49.5 Q 239.52 47.58 241.02 42.66 Q 243.3 35.16 246.78 28.68 Q 251.94 18.84 256.56 18.84 Q 259.38 18.84 259.38 23.52 Q 259.38 26.94 254.34 32.1 Z M 245.04 39.18 Q 247.02 37.8 249.09 35.91 Q 251.16 34.02 253.26 31.74 Q 258.48 25.86 258.48 22.62 Q 258.48 20.7 256.98 20.7 Q 252.9 20.7 246.3 35.94 Q 245.04 38.7 245.04 39.18 Z"
+                        id="13" vector-effect="non-scaling-stroke" />
+                </g>
+
+            </svg>
             <!-- <svg class="loader-logo" viewBox="0 0 100 100">
                 <path d="M10 90 L30 30 L50 70 L70 30 L90 90" />
             </svg> -->
@@ -59,8 +104,10 @@
                 </div>
                 <h3><span class="typing-text" style="font-family: Schoolbell, cursive;"></span></h3>
                 <p>
-                    Hi, I'm <span id="name" style="font-size: 34px; color: var(--main-color); padding-left: 6px; font-family: Sacramento, cursive;">Manish </span>— Full Stack Developer  <br> and AI Enthusiast,
-                    
+                    Hi, I'm <span id="name"
+                        style="font-size: 34px; color: var(--main-color); padding-left: 6px; font-family: Sacramento, cursive;">Manish
+                    </span>— Full Stack Developer <br> and AI Enthusiast,
+
                     From user experience to data handling, I engineer intelligent systems with purpose.
                     <br>Logic is my canvas, AI is my brush 🖌️.
                 </p>
@@ -70,7 +117,8 @@
                 </div>
             </div>
             <div class="home-social">
-                <a href="https://www.linkedin.com/in/manish-mohan-singh-546323359/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/manish-mohan-singh-546323359/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/manish-panwarr" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="mailto:manishmohansingh43@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="tel:9027811529"><i class="fa-solid fa-phone"></i></a>
@@ -84,12 +132,36 @@
         <section class="services mobile" id="services">
             <h2 class="section-title animate-on-scroll">Things I Love to <span>Do</span></h2>
             <div class="services-container">
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-code fa-bounce"></i><h3>Web Development</h3><p>Creating responsive and dynamic websites from the ground up using modern technologies like HTML, CSS, and JavaScript.</p></div>
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-robot fa-bounce"></i><h3>AI Integration</h3><p>Seamlessly embed AI into your products—boost automation, personalization, and decision-making using custom machine learning models.</p></div>
-                <div class="service-card animate-on-scroll"><i class="fa-solid fa-mobile-screen-button"></i><h3>Responsive Design</h3><p>Ensuring websites look and function perfectly on all devices, from large desktop screens to small mobile phones.</p></div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-infinity"></i><h3>DevOps & CI/CD</h3><p>Implement infrastructure-as-code, automated testing, containerization (Docker), and CI/CD pipelines using GitHub Actions.</p></div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-brain"></i><h3>AI & ML Solutions</h3><p>Design intelligent systems using Python, TensorFlow, and Scikit-learn. From predictive modeling to NLP applications.</p></div>
-                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-shield-halved"></i><h3>Security Implementation</h3><p>Ensure robust application security with best practices in authentication, encryption, code audits, and DevSecOps.</p></div>
+                <div class="service-card animate-on-scroll"><i class="fa-solid fa-code fa-bounce"></i>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and dynamic websites from the ground up using modern technologies like HTML,
+                        CSS, and JavaScript.</p>
+                </div>
+                <div class="service-card animate-on-scroll"><i class="fa-solid fa-robot fa-bounce"></i>
+                    <h3>AI Integration</h3>
+                    <p>Seamlessly embed AI into your products—boost automation, personalization, and decision-making
+                        using custom machine learning models.</p>
+                </div>
+                <div class="service-card animate-on-scroll"><i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring websites look and function perfectly on all devices, from large desktop screens to small
+                        mobile phones.</p>
+                </div>
+                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-infinity"></i>
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Implement infrastructure-as-code, automated testing, containerization (Docker), and CI/CD
+                        pipelines using GitHub Actions.</p>
+                </div>
+                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-brain"></i>
+                    <h3>AI & ML Solutions</h3>
+                    <p>Design intelligent systems using Python, TensorFlow, and Scikit-learn. From predictive modeling
+                        to NLP applications.</p>
+                </div>
+                <div class="service-card animate-on-scroll more"><i class="fa-solid fa-shield-halved"></i>
+                    <h3>Security Implementation</h3>
+                    <p>Ensure robust application security with best practices in authentication, encryption, code
+                        audits, and DevSecOps.</p>
+                </div>
             </div>
         </section>
 
@@ -97,47 +169,110 @@
         <section class="projects mobile" id="projects">
             <h2 class="section-title animate-on-scroll">Here’s What I <span> Build</span></h2>
             <div class="project-grid">
-                <div class="project-card animate-on-scroll"><div class="project-media" style="background-image: url(images/ai-chat-app.png);"></div><div class="project-info"><h3>AI Chat App || Coming soon...</h3><div class="project-links"><a href="https://github.com/manish-panwarr" target="_blank" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a></div></div></div>
-                <div class="project-card animate-on-scroll"><div class="project-media" style="background-image: url(images/phising-site.png);"></div><div class="project-info"><h3>Phishing Detection Extension</h3><div class="project-links"><a href="https://github.com/manish-panwarr" target="_blank" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/manish-panwarr/phising-site-detection-browser-extension" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a></div></div></div>
-                <div class="project-card animate-on-scroll"><div class="project-media" style="background-image: url(images/weather.jpg);"></div><div class="project-info"><h3>Weather api app (basic)</h3><div class="project-links"><a href="https://manish-panwarr.github.io/weather_app/" target="_blank" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/manish-panwarr/weather_app" target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a></div></div></div>
-                <a href="https://github.com/manish-panwarr" target="_blank" class="project-card-static animate-on-scroll"><div class="static-card-content"><h3 style="font-family: cursive">More Cool Projects...</h3><p>A description of your project goes here. Built with passion and code.</p><span>View on GitHub <i class="fa-solid fa-arrow-right"></i></span></div></a>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-media" style="background-image: url(images/ai-chat-app.png);"></div>
+                    <div class="project-info">
+                        <h3>AI Chat App || Coming soon...</h3>
+                        <div class="project-links"><a href="https://github.com/manish-panwarr" target="_blank"
+                                title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+                                href="https://github.com/manish-panwarr" target="_blank" title="Source Code"><i
+                                    class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-media" style="background-image: url(images/phising-site.png);"></div>
+                    <div class="project-info">
+                        <h3>Phishing Detection Extension</h3>
+                        <div class="project-links"><a href="https://github.com/manish-panwarr" target="_blank"
+                                title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+                                href="https://github.com/manish-panwarr/phising-site-detection-browser-extension"
+                                target="_blank" title="Source Code"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-media" style="background-image: url(images/weather.jpg);"></div>
+                    <div class="project-info">
+                        <h3>Weather api app (basic)</h3>
+                        <div class="project-links"><a href="https://manish-panwarr.github.io/weather_app/"
+                                target="_blank" title="Live Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a><a
+                                href="https://github.com/manish-panwarr/weather_app" target="_blank"
+                                title="Source Code"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <a href="https://github.com/manish-panwarr" target="_blank"
+                    class="project-card-static animate-on-scroll">
+                    <div class="static-card-content">
+                        <h3 style="font-family: cursive">More Cool Projects...</h3>
+                        <p>A description of your project goes here. Built with passion and code.</p><span>View on GitHub
+                            <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
             </div>
         </section>
 
         <!-- ==================== MY JOURNEY (SLIDER) SECTION ==================== -->
         <section class="journey full-width-section mobile" id="journey">
-             <div class="journey-content">
-                 <h2 class="section-title animate-on-scroll">A Glimpse of My <span>Journey</span></h2>
-                 <div class="component-wrapper animate-on-scroll">
-                     <div class="effect-selector-container">
-                         <label for="effect-selector">Animation Effect:</label>
-                         <select id="effect-selector">
-                             <option value="flip">3D Flip</option><option value="windmill">Windmill</option><option value="concave">Concave</option><option value="convex">Convex</option><option value="fade">Fade</option>
-                         </select>
-                     </div>
-                 </div>
-             </div>
-             <div class="slider-container animate-on-scroll">
-                 <div class="slider">
-                     <div class="slides">
-                         <img src="images/sec-H1.jpg" alt="A cityscape" class="slide" /><img src="images/geu.jpg" alt="The Golden Gate Bridge" class="slide" /><img src="images/geu2.jpg" alt="Another abstract piece" class="slide" />
-                     <img src="images/sec-H2.jpg" alt="A beautiful landscape" class="slide" />
-                        </div>
-                     <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
-                     <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
-                 </div>
-                 <div class="navigation-dots">
-                     <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                 </div>
-             </div>
+            <div class="journey-content">
+                <h2 class="section-title animate-on-scroll">A Glimpse of My <span>Journey</span></h2>
+                <div class="component-wrapper animate-on-scroll">
+                    <div class="effect-selector-container">
+                        <label for="effect-selector">Animation Effect:</label>
+                        <select id="effect-selector">
+                            <option value="flip">3D Flip</option>
+                            <option value="windmill">Windmill</option>
+                            <option value="concave">Concave</option>
+                            <option value="convex">Convex</option>
+                            <option value="fade">Fade</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-container animate-on-scroll">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/sec-H1.jpg" alt="A cityscape" class="slide" /><img src="images/geu.jpg"
+                            alt="The Golden Gate Bridge" class="slide" /><img src="images/geu2.jpg"
+                            alt="Another abstract piece" class="slide" />
+                        <img src="images/sec-H2.jpg" alt="A beautiful landscape" class="slide" />
+                    </div>
+                    <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="navigation-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
         </section>
 
         <!-- ==================== ABOUT SECTION ==================== -->
         <section class="about mobile" id="about">
             <h2 class="section-title animate-on-scroll">About <span>Me</span></h2>
             <div class="about-container">
-                <div class="about-card animate-on-scroll"><i class="fa-solid fa-user-graduate"></i><h3>My College</h3><div class="college-logos"><a href="https://geu.ac.in/" target="_blank"><img src="images/geu_logo-removebg-preview.png" alt="GEU Logo" /></a></div><p>Bachelor of Computer Application (BCA) || 2022-2025 || GEU <br> Masters of Computer Application (MCA) || 2025-2028 || GEU</p></div>
-                <div class="about-card animate-on-scroll"><i class="fa-solid fa-users"></i><h3>My Team & Network</h3><p>I believe in collaboration. Connect with me and my network on these platforms.</p><div class="team-social"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a><a href="https://www.linkedin.com/in/manish-mohan-singh-546323359/"><i class="fa-brands fa-linkedin"></i></a><a href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i class="fa-brands fa-github"></i></a><a href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i class="fa-brands fa-youtube"></i></a></div></div>
+                <div class="about-card animate-on-scroll"><i class="fa-solid fa-user-graduate"></i>
+                    <h3>My College</h3>
+                    <div class="college-logos"><a href="https://geu.ac.in/" target="_blank"><img
+                                src="images/geu_logo-removebg-preview.png" alt="GEU Logo" /></a></div>
+                    <p>Bachelor of Computer Application (BCA) || 2022-2025 || GEU <br> Masters of Computer Application
+                        (MCA) || 2025-2028 || GEU</p>
+                </div>
+                <div class="about-card animate-on-scroll"><i class="fa-solid fa-users"></i>
+                    <h3>My Team & Network</h3>
+                    <p>I believe in collaboration. Connect with me and my network on these platforms.</p>
+                    <div class="team-social"><a href="https://www.facebook.com/"><i
+                                class="fa-brands fa-facebook"></i></a><a
+                            href="https://www.linkedin.com/in/manish-mohan-singh-546323359/"><i
+                                class="fa-brands fa-linkedin"></i></a><a
+                            href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i
+                                class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i
+                                class="fa-brands fa-github"></i></a><a
+                            href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i
+                                class="fa-brands fa-youtube"></i></a></div>
+                </div>
             </div>
         </section>
 
@@ -145,53 +280,108 @@
         <section class="skills mobile" id="skills">
             <h2 class="section-title animate-on-scroll">Technical <span>Progress</span></h2>
             <div class="skills-container">
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 85; --clr: #43f94a"><h3>85<span>%</span></h3></div><h4>JAVA</h4></div>
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 90; --clr: #2ccde9"><h3>90<span>%</span></h3></div><h4>JS</h4></div>
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 85; --clr: #fb297b"><h3>85<span>%</span></h3></div><h4>PYTHON</h4></div>
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 80; --clr: #ffe047"><h3>80<span>%</span></h3></div><h4>REACT js</h4></div>
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 80; --clr: #ffffff"><h3>80<span>%</span></h3></div><h4>MONGODB</h4></div>
-                <div class="skill-card animate-on-scroll"><div class="progress" style="--i: 80; --clr: #434ff9"><h3>80<span>%</span></h3></div><h4>TypeScript</h4></div>
-                <div class="skill-card animate-on-scroll more"><div class="progress" style="--i: 90; --clr: #43f94a"><h3>90<span>%</span></h3></div><h4>HTML</h4></div>
-                <div class="skill-card animate-on-scroll more"><div class="progress" style="--i: 90; --clr: #2ccde9"><h3>90<span>%</span></h3></div><h4>CSS</h4></div>
-                <div class="skill-card animate-on-scroll more"><div class="progress" style="--i: 85; --clr: #fb297b"><h3>85<span>%</span></h3></div><h4>Tailwind</h4></div>
-                <div class="skill-card animate-on-scroll more"><div class="progress" style="--i: 86; --clr: #ffe047"><h3>86<span>%</span></h3></div><h4>SQL</h4></div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 85; --clr: #43f94a">
+                        <h3>85<span>%</span></h3>
+                    </div>
+                    <h4>JAVA</h4>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 90; --clr: #2ccde9">
+                        <h3>90<span>%</span></h3>
+                    </div>
+                    <h4>JS</h4>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 85; --clr: #fb297b">
+                        <h3>85<span>%</span></h3>
+                    </div>
+                    <h4>PYTHON</h4>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 80; --clr: #ffe047">
+                        <h3>80<span>%</span></h3>
+                    </div>
+                    <h4>REACT js</h4>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 80; --clr: #ffffff">
+                        <h3>80<span>%</span></h3>
+                    </div>
+                    <h4>MONGODB</h4>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="progress" style="--i: 80; --clr: #434ff9">
+                        <h3>80<span>%</span></h3>
+                    </div>
+                    <h4>TypeScript</h4>
+                </div>
+                <div class="skill-card animate-on-scroll more">
+                    <div class="progress" style="--i: 90; --clr: #43f94a">
+                        <h3>90<span>%</span></h3>
+                    </div>
+                    <h4>HTML</h4>
+                </div>
+                <div class="skill-card animate-on-scroll more">
+                    <div class="progress" style="--i: 90; --clr: #2ccde9">
+                        <h3>90<span>%</span></h3>
+                    </div>
+                    <h4>CSS</h4>
+                </div>
+                <div class="skill-card animate-on-scroll more">
+                    <div class="progress" style="--i: 85; --clr: #fb297b">
+                        <h3>85<span>%</span></h3>
+                    </div>
+                    <h4>Tailwind</h4>
+                </div>
+                <div class="skill-card animate-on-scroll more">
+                    <div class="progress" style="--i: 86; --clr: #ffe047">
+                        <h3>86<span>%</span></h3>
+                    </div>
+                    <h4>SQL</h4>
+                </div>
             </div>
         </section>
 
         <!-- ==================== CONTACT SECTION ==================== -->
-       <section class="contact mobile" id="contact">
-    <h2 class="section-title animate-on-scroll">Contact <span>Me</span></h2>
-    
-    <form id="contact-form" data-sitekey="6Lcji3ErAAAAAMHIRato0woU7tXK-FLmbwhzRgTF">
-        <!-- IMPORTANT: Get your free access key from https://web3forms.com/ and paste it here! -->
-        <input type="hidden" name="access_key" value="a1f64621-1685-46a5-a771-fb3c0f1255fe">
-        <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
-        <input type="hidden" name="from_name" value="M_Creation Portfolio" />
+        <section class="contact mobile" id="contact">
+            <h2 class="section-title animate-on-scroll">Contact <span>Me</span></h2>
 
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required />
-            </div>
-            <div class="input-box">
-                <input type="email" name="email" placeholder="Email Address" required />
-            </div>
-        </div>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              
+                <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
+                <input type="hidden" name="from_name" value="M_Creation Portfolio" />
 
-        <div class="input-box">
-            <textarea name="message" placeholder="Your Message or Query..." required></textarea>
-        </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Full Name" required />
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" placeholder="Email Address"  required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
+                    </div>
+                </div>
 
-        <button type="submit" class="btn">Send Message</button>
-        <div id="form-result"></div>
-    </form>
-</section>
+                <div class="input-box">
+                    <textarea name="message" placeholder="Your Message or Query..." required></textarea>
+                </div>
+               
+                <button type="submit" class="btn">Send Message</button>
+                <div id="form-result"></div>
+            </form>
+
+        </section>
 
     </main>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="footer-social">
-            <a href="https://www.linkedin.com/in/manish-mohan-singh-546323359/"><i class="fa-brands fa-linkedin"></i></a><a href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i class="fa-brands fa-github"></i></a><a href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/manish-mohan-singh-546323359/"><i
+                    class="fa-brands fa-linkedin"></i></a><a
+                href="https://www.instagram.com/manishmpanwar?igsh=MTdzNzJoZmx1MHdvYQ=="><i
+                    class="fa-brands fa-instagram"></i></a><a href="https://github.com/manish-panwarr/"><i
+                    class="fa-brands fa-github"></i></a><a
+                href="https://youtube.com/@Music_Walle222o?si=3CLiEV8_7dh9eZLh"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <div class="footer-text">
             <p>Made with ♥ by M_Creation <br />© 2023-2025, M_creation.com, Inc. or its affiliates</p>
@@ -200,9 +390,10 @@
             <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
-    
+
     <!-- Custom JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js" defer></script>
 </body>
+
 </html>

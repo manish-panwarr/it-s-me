@@ -11,7 +11,7 @@
   --shadow-color: rgba(0, 191, 255, 0.4);
   --success-color: #28a745;
   --error-color: #dc3545;
-  --border-color: #222;
+  --border-color: #151515;
 }
 
 /* ==================== RESET & BASE STYLES ==================== */
@@ -78,12 +78,15 @@ section {
   height: 100%;
   background: var(--bg-color);
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.75s ease, visibility 0.75s ease;
 
 }
 .loader-wrapper.hidden {
   opacity: 0;
-  visibility: flex;
+  visibility: hidden;
 }
 .loader-content {
   text-align: center;
@@ -206,15 +209,16 @@ section {
 }
 .btn {
   display: inline-block;
-  padding: 1.2rem 2.8rem;
+  padding: 1rem 2.2rem;
   background: var(--main-color);
   border-radius: 4rem;
   box-shadow: 0 0 0.7rem var(--shadow-color);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--bg-color);
   letter-spacing: 0.1rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s ease;
+
 }
 .btn:hover {
   background: var(--main-color-hover);

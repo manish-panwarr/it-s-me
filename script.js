@@ -1,23 +1,39 @@
 
   // Show alert when right-click or F12 is used
-//   document.addEventListener("contextmenu", function (e) {
-//     e.preventDefault(); // Block right-click menu
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault(); // Block right-click menu
 //    alert("Go to git repo..");
-//   });
+  });
 
-  // document.addEventListener("keydown", function (e) {
-  //   // F12 key (Developer tools)
-  //   if (e.key === "F12") {
-  //     e.preventDefault();
-  //     alert("Go to git repo..");
-  //   }
-  // });
+  document.addEventListener("keydown", function (e) {
+    // F12 key (Developer tools)
+    if (e.key === "F12") {
+      e.preventDefault();
+      alert("Go to git repo..");
+    }
+  });
 
-  // Enable fullscreen on double-click
-  document.addEventListener("dblclick", function () {
+let clickCount = 0;
+let clickTimer;
+
+document.addEventListener("click", function () {
+  clickCount++;
+
+  if (clickCount === 1) {
+    // Start/reset timer on the first click
+    clickTimer = setTimeout(() => {
+      clickCount = 0; // Reset after timeout
+    }, 500);
+  }
+
+  if (clickCount === 3) {
+    clearTimeout(clickTimer); // Stop the timer
+    clickCount = 0; // Reset click count
+
     const elem = document.documentElement;
 
     if (!document.fullscreenElement) {
+      // Enter fullscreen
       if (elem.requestFullscreen) {
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) { // Safari
@@ -25,8 +41,19 @@
       } else if (elem.msRequestFullscreen) { // IE11
         elem.msRequestFullscreen();
       }
+    } else {
+      // Exit fullscreen
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { // Safari
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { // IE11
+        document.msExitFullscreen();
+      }
     }
-  });
+  }
+});
+
 
 
 
@@ -40,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loader.classList.add('hidden');
                 document.body.classList.remove('loading');
-            },1800);
+            },0);
         });
     }
 
