@@ -1,7 +1,8 @@
 # mani.com
 # 🚀 MY portfolio website
 
-![Portfolio Banner](https://github.com/user-attachments/assets/f61c1a03-3497-4b0f-8fe1-92d72f5242ca)
+![Portfolio Banner]![mcreation](https://github.com/user-attachments/assets/dd0f24a5-fcfe-4381-a47c-c05adaa03558)
+
 ) <!-- Optional: Replace with actual banner -->
 
 Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **Full Stack Developer** and **AI Enthusiast**. This site is a showcase of creativity, code, and curiosity—designed to impress and built to inspire.
@@ -10,7 +11,7 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 
 ## 🔗 Live Website
 
-🌐 [View Portfolio:](https://manish-panwarr.github.io/mani.com/)
+🌐 [View Portfolio:](https://manish-panwarr.github.io/it-s-me/)
 
 ---
 
@@ -52,11 +53,11 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 
 > (You can add real screenshots below by uploading them in your repo)
 
-![Home](https://github.com/user-attachments/assets/83e2a89b-2526-4288-9644-faa760a6b42f)
-![Home](https://github.com/user-attachments/assets/ed9a99a1-6814-43ca-ab31-d09a20822339)
-![Profile and services](https://github.com/user-attachments/assets/0e10c63d-747c-4fe5-8f0a-4fbdf17fb39d)
+![Home]![Screenshot 2025-06-30 140001](https://github.com/user-attachments/assets/ee3e0927-561a-44d2-84fd-0542c90a6be7)
+![Mobile]![image](https://github.com/user-attachments/assets/15c8f718-87d0-4f54-8683-54a27b3ba055)
+![Profile and services]![Screenshot 2025-06-30 140015](https://github.com/user-attachments/assets/ddf3ea69-f080-45b5-89ab-76a32c4b73f7)
+![Skills]![Screenshot 2025-06-30 140051](https://github.com/user-attachments/assets/c2b58790-98c1-49f2-be58-fe49f5654f3a)
 
-![Projects](https://your-image-url.com/projects-preview.png)
 
 ---
 
@@ -73,4 +74,4 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/manish-panwarr/my-portfolio.git
+   git clone https://github.com/manish-panwarr/it-s-me.git
