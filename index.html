@@ -348,26 +348,29 @@
             <h2 class="section-title animate-on-scroll">Contact <span>Me</span></h2>
 
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-              
-                <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
-                <input type="hidden" name="from_name" value="M_Creation Portfolio" />
+    <!-- ✅ REQUIRED Access Key -->
+    <input type="hidden" name="access_key" value="a1f6421-1685-46a5-a771-fb3c0f1255fe" />
 
-                <div class="input-group">
-                    <div class="input-box">
-                        <input type="text" name="name" placeholder="Full Name" required />
-                    </div>
-                    <div class="input-box">
-                        <input type="email" name="email" placeholder="Email Address"  required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
-                    </div>
-                </div>
+    <input type="hidden" name="subject" value="New Submission from Portfolio Website" />
+    <input type="hidden" name="from_name" value="M_Creation Portfolio" />
 
-                <div class="input-box">
-                    <textarea name="message" placeholder="Your Message or Query..." required></textarea>
-                </div>
-               
-                <button type="submit" class="btn">Send Message</button>
-                <div id="form-result"></div>
-            </form>
+    <div class="input-group">
+        <div class="input-box">
+            <input type="text" name="name" placeholder="Full Name" required />
+        </div>
+        <div class="input-box">
+            <input type="email" name="email" placeholder="Email Address" required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
+        </div>
+    </div>
+
+    <div class="input-box">
+        <textarea name="message" placeholder="Your Message or Query..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Send Message</button>
+    <div id="form-result"></div>
+</form>
+
 
         </section>
 
