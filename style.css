@@ -1,6 +1,10 @@
 /* ==================== GOOGLE FONTS ==================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&family=Sacramento&family=Schoolbell&display=swap");
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ==================== CSS VARIABLES ==================== */
 :root {
   --bg-color: #080808;
