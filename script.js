@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 loader.classList.add('hidden');
                 document.body.classList.remove('loading');
-            },1800);
+            },1600);
         });
     }
 
