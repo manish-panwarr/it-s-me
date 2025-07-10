@@ -64,7 +64,7 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 ## 📬 Contact Me
 
 📧 Email: [manishmohansingh43@gmail.com](mailto:manishmohansingh43@gmail.com)  
-🔗 LinkedIn: [https://www.linkedin.com/in/manish-mohan-singh-546323359/](https://linkedin.com)  
+🔗 LinkedIn: [https://www.linkedin.com/in/manish-mohan-singh-aab371374/](https://linkedin.com)  
 🐱 GitHub: [https://github.com/manish-panwarr](https://github.com)  
 📣 Telegram: [Join My Channel](https://telegram.org)
 
