@@ -792,10 +792,23 @@ section {
   gap: 2rem;
   margin: 1.5rem 0;
 }
+
+
+.MUJ img{
+height: auto;
+width: 20rem;
+transition: filter 0.5s ;
+filter: grayscale(50%) ;
+}
+
+.MUJ img:hover{
+filter: grayscale(0%);
+}
 .college-logos img {
   height: 50px;
   filter: grayscale(50%);
   transition: filter 0.3s;
+
 }
 .college-logos a:hover img {
   filter: grayscale(0%);
