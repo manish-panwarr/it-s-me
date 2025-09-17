@@ -32,6 +32,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   background: var(--bg-color);
@@ -96,13 +97,11 @@ section {
   text-align: center;
 }
 .loader-logo {
-
-  
   width: 70vw;
   height: 20vw;
 }
 .loader-logo path {
-  fill :none;
+  fill: none;
   stroke: var(--main-color);
   stroke-width: 0.5px;
   stroke-linecap: round;
@@ -118,7 +117,7 @@ section {
 }
 .loader-text {
   font-family: "Roboto Mono", monospace;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--text-color);
   margin-top: 1.5rem;
   letter-spacing: 1px;
@@ -222,7 +221,6 @@ section {
   letter-spacing: 0.1rem;
   font-weight: 500;
   transition: all 0.3s ease;
-
 }
 .btn:hover {
   background: var(--main-color-hover);
@@ -339,16 +337,16 @@ section {
   border-color: var(--main-color);
 }
 .service-card i {
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: var(--main-color);
   margin-bottom: 1.5rem;
 }
 .service-card h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
 .service-card p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.7;
 }
 
@@ -524,7 +522,7 @@ section {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-    border-radius: 20px;
+  border-radius: 20px;
 }
 .slide {
   position: absolute;
@@ -750,6 +748,196 @@ section {
   box-shadow: 0 0 10px var(--shadow-color);
 }
 
+/* Certificates */
+.certificate-titile {
+  margin-bottom: -40px;
+}
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.main-view {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-view img {
+  height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: all 0.2s ease-out;
+}
+
+
+
+/* Wrapper hides overflow */
+.certificates-wrapper {
+  width: 95vw;
+  height: 20%;
+  overflow: hidden;
+  position: relative;
+  overflow-x: scroll;
+}
+
+/* Infinite scroll container */
+.certificates-small {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.certificates-small:hover {
+  animation-play-state: paused; /* stop on hover */
+}
+
+.certificate-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.certificate-card img {
+  height: 155px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card img:hover {
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+  height: 3px;
+  width: 10px; /* width of the scrollbar */
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* background of the track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* gradient thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* hover effect */
+}
+
+/* Infinite scrolling keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .certificate-container {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .main-view {
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .certificates-wrapper {
+    height: 120px;
+  }
+
+  .certificate-card img {
+    height: 100px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  .certificate-container {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .certificate-titile {
+    margin-bottom: 46px;
+  }
+  .main-view {
+    height: 100%;
+  }
+
+  .main-view img {
+    max-height: 360px;
+  }
+
+  .certificates-wrapper {
+    margin-top: 5%;
+    height: 90px;
+    gap: 5px;
+  }
+
+  .certificate-card img {
+    height: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .certificate-container {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .main-view {
+    height: 100%;
+    width: 70%;
+  }
+
+  .certificates-wrapper {
+    width: 40%;
+    height: 85%;
+    animation: none;
+    
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .certificates-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: visible;
+    flex-wrap: wrap;
+    animation: none;
+
+  }
+
+  .certificates-small img {
+    height: 120px;
+    
+  }
+}
+
 /* ==================== ABOUT & SKILLS SECTION (Original) ==================== */
 .about {
   background: var(--second-bg-color);
@@ -761,7 +949,6 @@ section {
 }
 
 .about-card {
-  
   background: var(--bg-color);
   padding: 3.5rem;
   border-radius: 2rem;
@@ -793,22 +980,20 @@ section {
   margin: 1.5rem 0;
 }
 
-
-.MUJ img{
-height: auto;
-width: 20rem;
-transition: filter 0.5s ;
-filter: grayscale(50%) ;
+.MUJ img {
+  height: auto;
+  width: 20rem;
+  transition: filter 0.5s;
+  filter: grayscale(50%);
 }
 
-.MUJ img:hover{
-filter: grayscale(0%);
+.MUJ img:hover {
+  filter: grayscale(0%);
 }
 .college-logos img {
   height: 50px;
   filter: grayscale(50%);
   transition: filter 0.3s;
-
 }
 .college-logos a:hover img {
   filter: grayscale(0%);
@@ -1063,7 +1248,6 @@ filter: grayscale(0%);
   .footer {
     padding: 3rem 3%;
   }
-
 }
 @media (max-width: 1000px) {
   .menu-icon {
@@ -1119,11 +1303,6 @@ filter: grayscale(0%);
   }
 }
 
-@media(max-width : 850px){
-
-
-}
-
 @media (min-width: 769px) {
   .project-grid {
     gap: 2.8rem;
@@ -1133,9 +1312,7 @@ filter: grayscale(0%);
   .services-container {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 4rem;
-    
   }
-  
 }
 @media (max-width: 450px) {
   html {
@@ -1158,27 +1335,27 @@ filter: grayscale(0%);
   .home-social {
     bottom: 9rem;
   }
- .slider-container{
-  width: 95% ;
- }
-  .mobile{
+  .slider-container {
+    width: 95%;
+  }
+  .mobile {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding-top: 120px;
   }
-  .services-container{
-    gap : 1rem;
+  .services-container {
+    gap: 1rem;
   }
-  .about-container{
-    gap : 2rem;
+  .about-container {
+    gap: 2rem;
   }
-  .project-grid{
-    gap : 2rem ;
+  .project-grid {
+    gap: 2rem;
   }
-  .project-card{
-    gap : 1rem;
+  .project-card {
+    gap: 1rem;
   }
 }
 @media (min-width: 1610px) {
@@ -1187,8 +1364,8 @@ filter: grayscale(0%);
     height: 25rem;
   }
   .services-container {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+    gap: 8rem;
   }
   .service-card {
     padding: 7rem;
@@ -1220,61 +1397,56 @@ filter: grayscale(0%);
   }
 }
 
-
 @media (min-width: 1280px) and (max-width: 1920px) {
   /* Styles for typical laptops */
-.slider-container{
-  width: 74.5%;
-}
+  .slider-container {
+    width: 74.5%;
+  }
 
-/* remove this if you are adding more features in about secitons*/
-.about-container {
-  padding-top: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  min-height: 450px; /* Adjust as needed */
-  
-}
-.about-card{
-  display: flex ;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 7rem;
-}
+  /* remove this if you are adding more features in about secitons*/
+  .about-container {
+    padding-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    min-height: 450px; /* Adjust as needed */
+  }
+  .about-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem;
+  }
 
-.service{
-  gap : 10px ;
-}
+  .service {
+    gap: 10px;
+  }
   .services-container {
     grid-template-columns: repeat(auto-fit, minmax(360px, 3fr));
     padding: 5%;
     width: 100%;
-    
+
     padding: 2px 4px 2px 4px;
-
   }
-.service-card{
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  .service-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mobile {
+    padding-top: 9%;
+  }
 
-}
-.mobile{
- padding-top: 9%;
-}
-
-.services-container{
-  gap : 1rem;
-}
-.about-container{
-  gap : 2rem;
-}
-.project-grid{
-  gap : 2rem ;
-}
-.project-card{
-  gap : 1rem;
-}
+  .services-container {
+    gap: 1rem;
+  }
+  .about-container {
+    gap: 2rem;
+  }
+  .project-grid {
+    gap: 2rem;
+  }
+  .project-card {
+    gap: 1rem;
+  }
 }
