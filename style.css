@@ -87,7 +87,7 @@ section {
   align-items: center;
   justify-content: center;
   transition: opacity 0.75s ease, visibility 0.75s ease;
-
+display: none;
 }
 .loader-wrapper.hidden {
   opacity: 0;
