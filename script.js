@@ -1,8 +1,8 @@
-// Show alert when right-click or F12 is used
-// document.addEventListener("contextmenu", function (e) {
-//   e.preventDefault(); // Block right-click menu
-//   //    alert("Go to git repo..");
-// });
+Show alert when right-click or F12 is used
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault(); // Block right-click menu
+  //    alert("Go to git repo..");
+});
 
 document.addEventListener("keydown", function (e) {
   // F12 key (Developer tools)
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const formData = new FormData(form);
       const accessKey = formData.get("access_key");
 
-      if (accessKey === "a1f64621-1685-46a5-a771-fb3c0f1255fe") {
+      if (accessKey === null) {
         e.preventDefault();
         result.innerHTML = "Please add your Access Key in the HTML file first.";
         result.style.display = "block";
@@ -370,4 +370,5 @@ const showCertificates = () => {
 };
 
 showCertificates();
+
 
