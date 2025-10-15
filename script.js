@@ -145,63 +145,61 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // --- Functional Contact Form ---
-  const form = document.getElementById("contact-form");
-  if (form) {
-    const result = document.getElementById("form-result");
-    form.addEventListener("submit", function (e) {
-      const formData = new FormData(form);
-      const accessKey = formData.get("access_key");
+const form = document.getElementById("contact-form");
 
-      if (accessKey === null) {
-        e.preventDefault();
-        result.innerHTML = "Please add your Access Key in the HTML file first.";
-        result.style.display = "block";
-        result.classList.add("error");
-        setTimeout(() => {
-          result.style.display = "none";
-        }, 5000);
-        return;
-      }
+if (form) {
+  const result = document.getElementById("form-result");
 
-      e.preventDefault();
-      const object = {};
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
-      const json = JSON.stringify(object);
-      result.innerHTML = "Sending...";
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // ✅ Moved up so default submit never triggers
+
+    const formData = new FormData(form);
+    const accessKey = formData.get("access_key");
+
+    // ✅ Access key validation
+    if (!accessKey) {
+      result.innerHTML = "Please add your Access Key in the HTML file first.";
       result.style.display = "block";
-      result.classList.remove("success", "error");
+      result.className = "error"; // replaced classList.add for simplicity
+      setTimeout(() => (result.style.display = "none"), 5000);
+      return;
+    }
 
-      fetch("https://api.web3forms.com/submit", {
+    const object = {};
+    formData.forEach((value, key) => (object[key] = value));
+
+    result.innerHTML = "Sending...";
+    result.style.display = "block";
+    result.className = "";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: json,
-      })
-        .then(async (response) => {
-          let jsonResponse = await response.json();
-          result.classList.add(response.status == 200 ? "success" : "error");
-          result.innerHTML =
-            jsonResponse.message ||
-            (response.status == 200
-              ? "Success! Your message has been sent."
-              : "Something went wrong.");
-        })
-        .catch(() => {
-          result.innerHTML = "Something went wrong!";
-          result.classList.add("error");
-        })
-        .finally(() => {
-          form.reset();
-          setTimeout(() => {
-            result.style.display = "none";
-          }, 5000);
-        });
-    });
-  }
+        body: JSON.stringify(object),
+      });
+
+      const jsonResponse = await response.json();
+
+      if (response.ok) {
+        result.className = "success";
+        result.innerHTML = jsonResponse.message || "Success! Your message has been sent.";
+        form.reset();
+      } else {
+        result.className = "error";
+        result.innerHTML = jsonResponse.message || "Something went wrong.";
+      }
+    } catch (error) {
+      result.className = "error";
+      result.innerHTML = "Something went wrong! Please try again.";
+    } finally {
+      setTimeout(() => (result.style.display = "none"), 5000);
+    }
+  });
+}
 
   // ==================== 3. ADVANCED SLIDER SCRIPT ====================
   if (document.querySelector(".slider")) {
@@ -370,5 +368,6 @@ const showCertificates = () => {
 };
 
 showCertificates();
+
 
 
