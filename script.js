@@ -323,7 +323,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const certificates = [{
+const certificates = [
+    {
         title: "forage-accenture",
         src: "images/accenture.png"
     },
@@ -337,7 +338,7 @@ const certificates = [{
     },
     {
       title:"Scaler-DSA-Intermediate",
-        src="images/Scaler DSA certificate.png",
+        src="images/ScalerDSA-certificate.png",
     },
     {
         title: "coursera-Ai for Everyone",
@@ -362,7 +363,7 @@ const certificatesmall = document.querySelector(".certificates-small");
 
 const showCertificates = () => {
     // Fill certificates twice for infinite scroll effect
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 1; i++) {
         certificates.forEach((certificate) => {
             const certificateCard = document.createElement("div");
             certificateCard.classList.add("certificate-card");
@@ -383,4 +384,5 @@ const showCertificates = () => {
 };
 
 showCertificates();
+
 
