@@ -336,6 +336,10 @@ const certificates = [{
         src: "images/coursera-aws.png"
     },
     {
+      title:"Scaler-DSA-Intermediate",
+        src="images/Scaler DSA certificate.png",
+    },
+    {
         title: "coursera-Ai for Everyone",
         src: "images/coursera1.png"
     },
@@ -379,3 +383,4 @@ const showCertificates = () => {
 };
 
 showCertificates();
+
