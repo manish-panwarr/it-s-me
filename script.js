@@ -1,4 +1,4 @@
-Show alert when right - click or F12 is used
+// Show alert when right - click or F12 is used
 document.addEventListener("contextmenu", function(e) {
     e.preventDefault(); // Block right-click menu
     //    alert("Go to git repo..");
@@ -274,7 +274,7 @@ const certificates = [
     { title: "Scaler-DSA-Intermediate", src: "images/ScalerDSA-certificate.png" },
     { title: "coursera-Ai for Everyone", src: "images/coursera1.png" },
     { title: "coursera-GEN-AI", src: "images/coursera2.png" },
-    { title: "tcs-cybersecurity-IAM, src: "images/tcs-cybersecurity-IAM.png"},
+    { title: "tcs-cybersecurity-IAM", src: "images/tcs-cybersecurity-IAM.png"},
     { title: "forage-tata", src: "images/tata-forage.png" },
     { title: "Udemy-MERN", src: "images/udemy-MERN.png" }
 ];
