@@ -1,26 +1,26 @@
-// Show alert when right - click or F12 is used
-document.addEventListener("contextmenu", function(e) {
-    e.preventDefault(); // Block right-click menu
-    //    alert("Go to git repo..");
-});
+/* ================================
+   Disable Right-Click & F12
+================================ */
+document.addEventListener("contextmenu", e => e.preventDefault());
 
-document.addEventListener("keydown", function(e) {
-    // F12 key (Developer tools)
+document.addEventListener("keydown", e => {
     if (e.key === "F12") {
         e.preventDefault();
         alert("Go to git repo..");
     }
 });
+
+/* ================================
+   Triple Click Fullscreen Toggle
+================================ */
 let clickCount = 0;
 let clickTimer;
 
-document.addEventListener("click", function () {
+document.addEventListener("click", () => {
     clickCount++;
 
     if (clickCount === 1) {
-        clickTimer = setTimeout(() => {
-            clickCount = 0;
-        }, 500);
+        clickTimer = setTimeout(() => (clickCount = 0), 500);
     }
 
     if (clickCount === 3) {
@@ -30,29 +30,25 @@ document.addEventListener("click", function () {
         const elem = document.documentElement;
 
         if (!document.fullscreenElement) {
-            if (elem.requestFullscreen) elem.requestFullscreen();
-            else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
-            else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+            elem.requestFullscreen?.() ||
+            elem.webkitRequestFullscreen?.() ||
+            elem.msRequestFullscreen?.();
         } else {
-            if (document.exitFullscreen) document.exitFullscreen();
-            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-            else if (document.msExitFullscreen) document.msExitFullscreen();
+            document.exitFullscreen?.() ||
+            document.webkitExitFullscreen?.() ||
+            document.msExitFullscreen?.();
         }
     }
 });
 
+/* ================================
+   DOM Loaded
+================================ */
 document.addEventListener("DOMContentLoaded", () => {
-    const loader = document.getElementById("loader");
-    if (loader) {
-        document.body.classList.add("loading");
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                loader.classList.add("hidden");
-                document.body.classList.remove("loading");
-            }, 1000);
-        });
-    }
 
+  
+
+    /* ---------------- Mobile Menu ---------------- */
     const menuIcon = document.getElementById("menu-icon");
     const navbar = document.querySelector(".navbar");
     const icon = menuIcon.querySelector("i");
@@ -63,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.classList.toggle("active");
     };
 
+    /* ---------------- Typing Effect ---------------- */
     if (document.querySelector(".typing-text")) {
         new Typed(".typing-text", {
             strings: [
@@ -77,14 +74,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+    /* ---------------- Scroll Animations ---------------- */
+    const scrollObserver = new IntersectionObserver(
+        entries => entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-    }, { threshold: 0.12 });
+        }),
+        { threshold: 0.12 }
+    );
 
-    document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
+    document.querySelectorAll(".animate-on-scroll")
+        .forEach(el => scrollObserver.observe(el));
 
+    /* ---------------- Navbar Active Link & Sticky Header ---------------- */
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("header nav a");
 
@@ -92,17 +93,23 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentSectionId = "";
         const top = window.scrollY;
 
-        sections.forEach((sec) => {
+        sections.forEach(sec => {
             const offset = sec.offsetTop - 150;
             const height = sec.offsetHeight;
-            if (top >= offset && top < offset + height) currentSectionId = sec.id;
+            if (top >= offset && top < offset + height) {
+                currentSectionId = sec.id;
+            }
         });
 
-        navLinks.forEach((link) => {
-            link.classList.toggle("active", link.getAttribute("href").substring(1) === currentSectionId);
+        navLinks.forEach(link => {
+            link.classList.toggle(
+                "active",
+                link.getAttribute("href").substring(1) === currentSectionId
+            );
         });
 
-        document.querySelector("header").classList.toggle("sticky", top > 100);
+        document.querySelector("header")
+            .classList.toggle("sticky", top > 100);
 
         if (navbar.classList.contains("active")) {
             icon.classList.add("fa-bars");
@@ -111,12 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    /* ---------------- Contact Form ---------------- */
     const form = document.getElementById("contact-form");
 
     if (form) {
         const result = document.getElementById("form-result");
 
-        form.addEventListener("submit", function (e) {
+        form.addEventListener("submit", e => {
             e.preventDefault();
 
             const formData = new FormData(form);
@@ -126,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 result.innerHTML = "Please add your Access Key in the HTML file first.";
                 result.style.display = "block";
                 result.classList.add("error");
-                setTimeout(() => result.style.display = "none", 5000);
+                setTimeout(() => (result.style.display = "none"), 5000);
                 return;
             }
 
@@ -142,21 +150,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     Accept: "application/json"
                 },
                 body: json
-            }).then(async (response) => {
-                const jsonResponse = await response.json();
-                const success = response.status === 200;
-                result.classList.add(success ? "success" : "error");
-                result.innerHTML = jsonResponse.message || (success ? "Success! Your message has been sent." : "Something went wrong.");
-            }).catch(() => {
-                result.innerHTML = "Something went wrong!";
-                result.classList.add("error");
-            }).finally(() => {
-                form.reset();
-                setTimeout(() => result.style.display = "none", 5000);
-            });
+            })
+                .then(async response => {
+                    const jsonResponse = await response.json();
+                    const success = response.status === 200;
+
+                    result.classList.add(success ? "success" : "error");
+                    result.innerHTML =
+                        jsonResponse.message ||
+                        (success
+                            ? "Success! Your message has been sent."
+                            : "Something went wrong.");
+                })
+                .catch(() => {
+                    result.innerHTML = "Something went wrong!";
+                    result.classList.add("error");
+                })
+                .finally(() => {
+                    form.reset();
+                    setTimeout(() => (result.style.display = "none"), 5000);
+                });
         });
     }
 
+    /* ---------------- Slider ---------------- */
     if (document.querySelector(".slider")) {
         const sliderSlides = document.querySelectorAll(".slide");
         const sliderPrevBtn = document.querySelector(".slider-btn.prev");
@@ -173,6 +190,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let autoSlideInterval;
         let isAnimating = false;
 
+        const updateActiveDot = index => {
+            sliderDots.forEach((dot, i) =>
+                dot.classList.toggle("active", i === index)
+            );
+        };
+
         const onAnimationEnd = (currentSlide, nextSlide, newIndex) => {
             isAnimating = false;
             currentSlide.className = "slide";
@@ -186,51 +209,80 @@ document.addEventListener("DOMContentLoaded", () => {
                 n.classList.add("active");
                 c.className = "slide animating fade-out";
                 n.className = "slide active animating fade-in";
-                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), { once: true });
+                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), {
+                    once: true
+                });
             },
+
             flip: (c, n, i, d) => {
                 n.classList.add("active");
-                c.className = `slide animating ${d === "next" ? "flip-out-next" : "flip-out-prev"}`;
-                n.className = `slide active animating ${d === "next" ? "flip-in-next" : "flip-in-prev"}`;
-                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), { once: true });
+                c.className = `slide animating ${
+                    d === "next" ? "flip-out-next" : "flip-out-prev"
+                }`;
+                n.className = `slide active animating ${
+                    d === "next" ? "flip-in-next" : "flip-in-prev"
+                }`;
+                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), {
+                    once: true
+                });
             },
+
             windmill: (c, n, i) => {
                 n.classList.add("active");
                 c.className = "slide animating windmill-out";
                 n.className = "slide active animating windmill-in";
-                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), { once: true });
+                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), {
+                    once: true
+                });
             },
+
             concave: (c, n, i, d) => {
-                n.classList.add("active");
-                c.className = `slide animating ${d === "next" ? "concave-out-next" : "concave-out-prev"}`;
-                n.className = `slide active animating ${d === "next" ? "concave-in-next" : "concave-in-prev"}`;
-                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), { once: true });
+                n.className = `slide active animating ${
+                    d === "next" ? "concave-in-next" : "concave-in-prev"
+                }`;
+                c.className = `slide animating ${
+                    d === "next" ? "concave-out-next" : "concave-out-prev"
+                }`;
+                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), {
+                    once: true
+                });
             },
+
             convex: (c, n, i, d) => {
-                n.classList.add("active");
-                c.className = `slide animating ${d === "next" ? "convex-out-next" : "convex-out-prev"}`;
-                n.className = `slide active animating ${d === "next" ? "convex-in-next" : "convex-in-prev"}`;
-                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), { once: true });
+                n.className = `slide active animating ${
+                    d === "next" ? "convex-in-next" : "convex-in-prev"
+                }`;
+                c.className = `slide animating ${
+                    d === "next" ? "convex-out-next" : "convex-out-prev"
+                }`;
+                n.addEventListener("animationend", () => onAnimationEnd(c, n, i), {
+                    once: true
+                });
             }
         };
 
-        const animateSlide = (newIndex) => {
+        const animateSlide = newIndex => {
             if (isAnimating || newIndex === currentIndex) return;
+
             isAnimating = true;
 
-            const dir = newIndex > currentIndex || (currentIndex === totalSlides - 1 && newIndex === 0)
-                ? "next"
-                : "prev";
+            const direction =
+                newIndex > currentIndex ||
+                (currentIndex === totalSlides - 1 && newIndex === 0)
+                    ? "next"
+                    : "prev";
 
-            effects[currentEffect](sliderSlides[currentIndex], sliderSlides[newIndex], newIndex, dir);
-        };
-
-        const updateActiveDot = (index) => {
-            sliderDots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+            effects[currentEffect](
+                sliderSlides[currentIndex],
+                sliderSlides[newIndex],
+                newIndex,
+                direction
+            );
         };
 
         const showNext = () => animateSlide((currentIndex + 1) % totalSlides);
-        const showPrev = () => animateSlide((currentIndex - 1 + totalSlides) % totalSlides);
+        const showPrev = () =>
+            animateSlide((currentIndex - 1 + totalSlides) % totalSlides);
 
         const startAuto = () => {
             clearInterval(autoSlideInterval);
@@ -254,11 +306,13 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        effectSelector.addEventListener("change", (e) => {
+        effectSelector.addEventListener("change", e => {
             currentEffect = e.target.value;
         });
 
-        sliderContainer.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+        sliderContainer.addEventListener("mouseenter", () =>
+            clearInterval(autoSlideInterval)
+        );
         sliderContainer.addEventListener("mouseleave", startAuto);
 
         sliderSlides[0].classList.add("active");
@@ -267,6 +321,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+/* ================================
+   Certificates Section
+================================ */
 const certificates = [
     { title: "forage-accenture", src: "images/accenture.png" },
     { title: "forage-aws", src: "images/aws-forage.png" },
@@ -283,7 +340,7 @@ const mainview = document.querySelector(".main-view img");
 const certificatesmall = document.querySelector(".certificates-small");
 
 const showCertificates = () => {
-    certificates.forEach((certificate) => {
+    certificates.forEach(certificate => {
         const card = document.createElement("div");
         card.classList.add("certificate-card");
 
@@ -299,10 +356,49 @@ const showCertificates = () => {
         });
     });
 };
-
 showCertificates();
 
+/* ================================
+   Dynamic Skill Progress Animation
+================================ */
+const progressBars = document.querySelectorAll(".progress");
+
+const skillOptions = { threshold: 0.5 };
+
+const animateSkills = entry => {
+    const progress = entry.target;
+
+    if (progress.classList.contains("animated")) return;
+    progress.classList.add("animated");
+
+    const targetValue = parseInt(progress.dataset.value);
+    const numberText = progress.querySelector("h3");
+
+    let current = 0;
+
+    const interval = setInterval(() => {
+        current++;
+        progress.style.background = `conic-gradient(var(--clr) ${current}%, #2a2a2a 0)`;
+        numberText.innerHTML = `${current}<span>%</span>`;
+
+        if (current >= targetValue) clearInterval(interval);
+    }, 20);
+};
+
+const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) animateSkills(entry);
+    });
+}, skillOptions);
+
+progressBars.forEach(bar => skillObserver.observe(bar));
 
 
 
-
+// Inject API key into hidden input
+document.addEventListener("DOMContentLoaded", () => {
+    const keyField = document.getElementById("access_key");
+    if (keyField) {
+        keyField.value = WEB3FORM_KEY;  // coming from config.js
+    }
+});

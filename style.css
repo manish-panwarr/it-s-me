@@ -911,7 +911,7 @@ display: none;
 
   .certificates-wrapper {
     width: 40%;
-    height: 85%;
+    height: 75%;
     animation: none;
     
     overflow: scroll;
@@ -933,7 +933,7 @@ display: none;
   }
 
   .certificates-small img {
-    height: 120px;
+    height: 100px;
     
   }
 }
@@ -1031,8 +1031,10 @@ display: none;
   transform: translateY(5px);
 }
 .skills {
+  padding: 60px 0;
   background: var(--bg-color);
 }
+
 .skills-container {
   display: flex;
   justify-content: center;
@@ -1040,23 +1042,27 @@ display: none;
   flex-wrap: wrap;
   gap: 4.5rem;
 }
+
 .skill-card {
   text-align: center;
 }
+
 .skill-card .progress {
   position: relative;
   width: 16rem;
   height: 16rem;
   border-radius: 50%;
-  background: conic-gradient(var(--clr) calc(var(--i) * 1%), #2a2a2a 0);
+  background: conic-gradient(var(--clr) 0%, #2a2a2a 0);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.5s;
 }
+
 .skill-card:hover .progress {
   transform: scale(1.1);
 }
+
 .skill-card .progress::before {
   content: "";
   position: absolute;
@@ -1064,6 +1070,7 @@ display: none;
   background: var(--bg-color);
   border-radius: 50%;
 }
+
 .skill-card .progress h3 {
   position: relative;
   font-size: 4rem;
@@ -1071,16 +1078,19 @@ display: none;
   color: var(--clr);
   text-shadow: 0 0 5px var(--clr);
 }
+
 .skill-card .progress h3 span {
   font-size: 2rem;
   font-weight: 400;
 }
+
 .skill-card h4 {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 2rem;
   letter-spacing: 0.1rem;
 }
+
 
 /* ==================== CONTACT & FOOTER (Original) ==================== */
 .contact {
