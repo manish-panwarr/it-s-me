@@ -1,21 +1,19 @@
-# mani.com
-# 🚀 MY portfolio website
+MY portfolio website.
+<img width="537" height="852" alt="Screenshot 2025-11-16 110838" src="https://github.com/user-attachments/assets/fe2dafa8-74eb-4e25-be81-8e105b4c5360" />
+<img width="1886" height="967" alt="Screenshot 2025-11-16 110812" src="https://github.com/user-attachments/assets/fff1216a-6cf2-46bd-9fb4-83081228b6ec" />
 
-![Portfolio Banner]![mcreation](https://github.com/user-attachments/assets/dd0f24a5-fcfe-4381-a47c-c05adaa03558)
-
-) <!-- Optional: Replace with actual banner -->
 
 Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **Full Stack Developer** and **AI Enthusiast**. This site is a showcase of creativity, code, and curiosity—designed to impress and built to inspire.
 
 ---
 
-## 🔗 Live Website
+🔗 Live Website
 
 🌐 [View Portfolio:](https://manish-panwarr.github.io/it-s-me/)
 
 ---
 
-## 📌 Features
+📌 Features
 
 ✨ Smooth scrolling single-page design  
 💡 Animated hero section with typewriter effect  
@@ -24,9 +22,7 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 🛠️ Service and skills sections with iconography  
 🧠 Projects highlighting real-world applications  
 
----
-
-## 🧰 Tech Stack
+🧰 Tech Stack
 
 | Category        | Tools Used                                 |
 |---------------- |--------------------------------------------|
@@ -38,37 +34,28 @@ Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **
 
 ---
 
-## 📂 Folder Structure
+📂 Folder Structure
 📁 my-portfolio/
 ├── index.html # Main entry point
 ├── style.css # Stylesheet
 |-- script.js
+|-- config.js
 ├── /images # All static images
 └── README.md # You're here!
 
+📸 Preview
 
----
+<img width="542" height="853" alt="Screenshot 2025-11-16 110911" src="https://github.com/user-attachments/assets/d4723ba0-2ba6-4f45-ad4c-f2955d6c2cad" />
+<img width="1299" height="759" alt="Screenshot 2025-11-16 110946" src="https://github.com/user-attachments/assets/91d0fc01-145e-47b9-ae3a-471f53682a64" />
+<img width="1914" height="1072" alt="Screenshot 2025-11-16 111017" src="https://github.com/user-attachments/assets/a42404cd-d5f4-48cf-b830-af9ab429d645" />
+<img width="1892" height="970" alt="Screenshot 2025-11-16 110932" src="https://github.com/user-attachments/assets/ce85cc88-ed5b-4cd2-aa0b-f0903d46bf0c" />
 
-## 📸 Preview
-
-> (You can add real screenshots below by uploading them in your repo)
-
-![Home]![Screenshot 2025-06-30 140001](https://github.com/user-attachments/assets/ee3e0927-561a-44d2-84fd-0542c90a6be7)
-![Mobile]![image](https://github.com/user-attachments/assets/15c8f718-87d0-4f54-8683-54a27b3ba055)
-![Profile and services]![Screenshot 2025-06-30 140015](https://github.com/user-attachments/assets/ddf3ea69-f080-45b5-89ab-76a32c4b73f7)
-![Skills]![Screenshot 2025-06-30 140051](https://github.com/user-attachments/assets/c2b58790-98c1-49f2-be58-fe49f5654f3a)
-
-
----
-
-## 📬 Contact Me
+📬 Contact Me
 
 📧 Email: [manishmohansingh43@gmail.com](mailto:manishmohansingh43@gmail.com)  
 🔗 LinkedIn: [https://www.linkedin.com/in/manish-mohan-singh-aab371374/](https://linkedin.com)  
 🐱 GitHub: [https://github.com/manish-panwarr](https://github.com)  
-📣 Telegram: [Join My Channel](https://telegram.org)
-
----
+📣 Telegram: [Join My Channel](https://t.me/manimms)
 
 ## 🛠️ How to Use
 
