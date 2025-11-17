@@ -350,95 +350,149 @@ display: none;
   line-height: 1.7;
 }
 
-/* ==================== PROJECTS SECTION (Original) ==================== */
+/* ==================== PROJECTS SECTION (Enhanced UX) ==================== */
 .projects {
   background: var(--bg-color);
 }
+
+/* Grid (unchanged size) */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
   gap: 3.3rem;
 }
+
+/* Card Upgrade */
 .project-card {
   background: var(--second-bg-color);
   border-radius: 2rem;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
+
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    opacity 0.55s ease;
 }
+
+/* Smooth fade/slide on scroll */
+.project-card.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Lift Effect (same size) */
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 30px var(--shadow-color);
+  box-shadow: 0 10px 35px var(--shadow-color);
 }
+
+/* Project Media with soft zoom and fade */
 .project-media {
   position: relative;
   padding-top: 56.25%;
   background-color: #000;
   background-size: cover;
   background-position: center;
+
+  filter: brightness(0.9);
+  transition: transform 0.5s ease, filter 0.4s ease;
 }
+
+.project-card:hover .project-media {
+  transform: scale(1.07);
+  filter: brightness(1);
+}
+
+/* Info Section */
 .project-info {
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transition: opacity 0.4s ease;
 }
+
+/* Title */
 .project-info h3 {
   font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
+
+.project-card:hover .project-info h3 {
+  color: var(--main-color);
+}
+
+/* Links */
 .project-links a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 4rem;
   height: 4rem;
+
   background: var(--bg-color);
   color: var(--main-color);
+
   border-radius: 50%;
   font-size: 1.8rem;
   margin-left: 1rem;
-  transition: all 0.3s;
+
+  transition: 
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 .project-links a:hover {
   background: var(--main-color);
   color: var(--bg-color);
-  transform: scale(1.1) rotate(10deg);
+  transform: scale(1.12) rotate(10deg);
+  box-shadow: 0 0 10px var(--main-color);
 }
+
+/* ==================== STATIC PROJECT CARD ==================== */
 .project-card-static {
   display: block;
   position: relative;
   border-radius: 2rem;
   overflow: hidden;
-  background: url("https://via.placeholder.com/600x400/111/fff?text=Project+Image")
-    no-repeat center center;
   background-size: cover;
+  background-position: center;
   color: var(--text-color);
-  transition: transform 0.4s ease;
+
+  transform: translateY(0);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
+
 .project-card-static:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px);
+  box-shadow: 0 10px 35px var(--shadow-color);
 }
+
+/* Gradient Overlay */
 .project-card-static::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
     to top,
-    rgba(8, 8, 8, 0.95) 20%,
-    rgba(8, 8, 8, 0.3)
+    rgba(8, 8, 8, 0.95) 25%,
+    rgba(8, 8, 8, 0.25)
   );
-  transition: background 0.4s ease;
+  transition: opacity 0.4s ease;
+  opacity: 1;
 }
+
 .project-card-static:hover::after {
-  background: linear-gradient(
-    to top,
-    rgba(8, 8, 8, 0.95) 40%,
-    rgba(8, 8, 8, 0.1)
-  );
+  opacity: 0.75;
 }
+
+/* Content */
 .static-card-content {
   position: relative;
   z-index: 2;
@@ -448,20 +502,26 @@ display: none;
   justify-content: flex-end;
   height: 100%;
 }
+
 .static-card-content h3 {
   font-size: 2.2rem;
 }
+
+/* Paragraph reveal */
 .static-card-content p {
   font-size: 1.4rem;
   margin: 0.5rem 0 1.5rem;
+
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.4s ease;
+  transition: all 0.45s ease;
 }
+
 .project-card-static:hover .static-card-content p {
   opacity: 1;
   transform: translateY(0);
 }
+
 .static-card-content span {
   font-weight: 600;
   color: var(--main-color);
@@ -749,8 +809,10 @@ display: none;
 }
 
 /* Certificates */
+
 .certificate-titile {
-  margin-bottom: -40px;
+  margin-top: -100px;
+  margin-bottom: -70px;
 }
 .certificate-container {
   display: flex;
@@ -876,7 +938,7 @@ display: none;
   }
 
   .certificate-titile {
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
   .main-view {
     height: 100%;
@@ -937,6 +999,84 @@ display: none;
     
   }
 }
+
+
+/* ==================== CERTIFICATE SECTION ANIMATIONS ==================== */
+
+.animate-cert-main {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.animate-cert-main.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Thumbnail Staggered Fade-up */
+.animate-cert-thumbs {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.animate-cert-thumbs.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thumbnail stagger (children) */
+.certificates-small .certificate-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.certificates-small.visible .certificate-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.certificates-small.visible .certificate-card:nth-child(1) { transition-delay: .1s; }
+.certificates-small.visible .certificate-card:nth-child(2) { transition-delay: .2s; }
+.certificates-small.visible .certificate-card:nth-child(3) { transition-delay: .3s; }
+.certificates-small.visible .certificate-card:nth-child(4) { transition-delay: .4s; }
+.certificates-small.visible .certificate-card:nth-child(5) { transition-delay: .5s; }
+.certificates-small.visible .certificate-card:nth-child(6) { transition-delay: .6s; }
+.certificates-small.visible .certificate-card:nth-child(7) { transition-delay: .7s; }
+.certificates-small.visible .certificate-card:nth-child(8) { transition-delay: .8s; }
+.certificates-small.visible .certificate-card:nth-child(9) { transition-delay: .9s; }
+
+/* Hover glow + zoom */
+.certificate-card img {
+  transition: transform 0.25s ease-out, filter .25s ease;
+}
+.certificate-card img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+/* Click-to-zoom popup */
+.certificate-zoom-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.certificate-zoom-modal.active { display: flex; }
+
+.certificate-zoom-modal img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+  animation: zoomPop .4s ease;
+}
+
+@keyframes zoomPop {
+  0% { transform: scale(.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 
 /* ==================== ABOUT & SKILLS SECTION (Original) ==================== */
 .about {
@@ -1316,7 +1456,7 @@ display: none;
 @media (min-width: 769px) {
   .project-grid {
     gap: 2.8rem;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 4rem;
   }
   .services-container {

@@ -45,9 +45,6 @@ document.addEventListener("click", () => {
    DOM Loaded
 ================================ */
 document.addEventListener("DOMContentLoaded", () => {
-
-  
-
     /* ---------------- Mobile Menu ---------------- */
     const menuIcon = document.getElementById("menu-icon");
     const navbar = document.querySelector(".navbar");
@@ -358,6 +355,57 @@ const showCertificates = () => {
 };
 showCertificates();
 
+
+/* =============================
+   Certificate Section Animation
+   ============================= */
+
+const certMain = document.querySelector('.animate-cert-main');
+const certThumbs = document.querySelector('.animate-cert-thumbs');
+const smallThumbContainer = document.querySelector('.certificates-small');
+
+if (certMain && certThumbs) {
+
+  const certObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        // reveal main image
+        certMain.classList.add('visible');
+
+        // reveal thumbnail wrapper
+        certThumbs.classList.add('visible');
+        
+        // reveal each thumbnail in stagger pattern
+        smallThumbContainer.classList.add('visible');
+        
+        certObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.25 });
+
+  certObserver.observe(document.querySelector('#certificate'));
+}
+
+/* =============================
+   Certificate Click-to-Zoom
+   ============================= */
+
+let zoomModal = document.createElement('div');
+zoomModal.className = "certificate-zoom-modal";
+zoomModal.innerHTML = `<img src="">`;
+document.body.appendChild(zoomModal);
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.certificate-card img')) {
+    let src = e.target.src;
+    zoomModal.querySelector('img').src = src;
+    zoomModal.classList.add('active');
+  } else if (e.target === zoomModal) {
+    zoomModal.classList.remove('active');
+  }
+});
+
 /* ================================
    Dynamic Skill Progress Animation
 ================================ */
@@ -402,3 +450,4 @@ document.addEventListener("DOMContentLoaded", () => {
         keyField.value = WEB3FORM_KEY;  // coming from config.js
     }
 });
+
