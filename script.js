@@ -1,6 +1,3 @@
-
-
-
 let clickCount = 0;
 let clickTimer;
 

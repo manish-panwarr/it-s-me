@@ -331,7 +331,7 @@ section {
 
 .circle {
   display: flex;
-  height: 40vh;
+  height: 35vh;
   width: 100%;
   max-height: 190px;
   justify-content: center;
@@ -350,7 +350,7 @@ section {
 
 .innerimg img {
   transition: all 0.5s ease;
-  border-radius: 10% 70% 80% 30% / 40% 30% 75% 70%;
+  border-radius: 15% 90% 90% 10% / 30% 35% 85% 80%;
   overflow: hidden;
 
 
@@ -378,13 +378,14 @@ section {
   padding: 3.5rem;
   border-radius: 2rem;
   text-align: center;
-  border: 1px solid #222;
+  border: 0.9px solid #222;
   transition: transform 0.3s, border-color 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  border-color: var(--main-color);
+  border-color: #00f1fe40;
+  scale: 1.01;
 }
 
 .service-card i {
@@ -967,6 +968,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+
+
 }
 
 .main-view img {
@@ -1306,16 +1309,18 @@ section {
 
 .about-card {
   background: var(--bg-color);
-  padding: 3.5rem;
+  padding: 1rem 3rem;
   border-radius: 2rem;
   text-align: center;
   border: 1px solid #222;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .about-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: #00f1fe40;
+  scale: 1.03;
 }
 
 .about-card i {
@@ -1507,7 +1512,7 @@ section {
 
 .info-item:hover {
   transform: translateY(-3px);
-  border-color: var(--main-color);
+  border-color: #00f1fe40;
 }
 
 .info-item i {
@@ -1583,7 +1588,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
   background: #222;
-  border-color: var(--main-color);
+  border-color: #00f1fe40;
   box-shadow: 0 0 0 4px rgba(0, 191, 255, 0.1);
   outline: none;
 }
@@ -1627,7 +1632,7 @@ section {
 }
 
 .contact-bottom-card:hover {
-  border-color: var(--main-color);
+  border-color: #00f1fe40;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.025);
 }
 
@@ -1727,17 +1732,17 @@ section {
 .map-overlay {
   position: absolute;
   bottom: 2rem;
-  left: 2rem;
-  background: rgba(0, 0, 0, 0.7);
+  right: 2rem;
+  background: transparent;
   backdrop-filter: blur(5px);
   padding: 1rem 2rem;
-  border-radius: 50px;
-  border: 1px solid var(--main-color);
   pointer-events: none;
+  border-radius: 50px;
+
 }
 
 .map-overlay span {
-  color: var(--main-color);
+  color: rgb(23, 152, 233);
   font-size: 1.4rem;
   font-weight: 600;
   display: flex;
