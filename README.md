@@ -3,7 +3,7 @@ MY portfolio website.
 <img width="1886" height="967" alt="Screenshot 2025-11-16 110812" src="https://github.com/user-attachments/assets/fff1216a-6cf2-46bd-9fb4-83081228b6ec" />
 
 
-Welcome to **M_Creation**, the personal portfolio of **Manish**, a passionate **Full Stack Developer** and **AI Enthusiast**. 
+Welcome to **M_Creation**, the Demo portfolio website.
 This site is a showcase of creativity, code, and curiosity— *designed to impress and built to inspire*.
 
 ---
