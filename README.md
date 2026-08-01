@@ -66,5 +66,4 @@ This site is a showcase of creativity, code, and curiosity— *designed to impre
 <img width="542" height="853" alt="Screenshot 2025-11-16 110911" src="https://github.com/user-attachments/assets/d4723ba0-2ba6-4f45-ad4c-f2955d6c2cad" />
 <img width="1299" height="759" alt="Screenshot 2025-11-16 110946" src="https://github.com/user-attachments/assets/91d0fc01-145e-47b9-ae3a-471f53682a64" />
 <img width="1914" height="1072" alt="Screenshot 2025-11-16 111017" src="https://github.com/user-attachments/assets/a42404cd-d5f4-48cf-b830-af9ab429d645" />
-<img width="1892" height="970" alt="Screenshot 2025-11-16 110932" src="https://github.com/user-attachments/assets/ce85cc88-ed5b-4cd2-aa0b-f0903d46bf0c" />
 
