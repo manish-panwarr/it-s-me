@@ -6,13 +6,11 @@ MY portfolio website.
 Welcome to **M_Creation**, the Demo portfolio website.
 This site is a showcase of creativity, code, and curiosity— *designed to impress and built to inspire*.
 
----
 
 🔗 Live Website
 
 🌐 [View Portfolio:](https://manish-panwarr.github.io/it-s-me/)
 
----
 
 📌 Features
 
